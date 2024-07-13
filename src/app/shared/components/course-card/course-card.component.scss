@@ -30,5 +30,18 @@
     &-text {
       margin-top: 16px;
     }
+
+    &-actions {
+      margin-top: 20px;
+      display: flex;
+      flex: auto;
+      text-wrap: nowrap;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex: auto;
+    text-wrap: nowrap;
   }
 }

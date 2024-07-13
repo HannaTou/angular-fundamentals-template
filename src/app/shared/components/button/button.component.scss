@@ -1,6 +1,8 @@
 .app-button {
     display: flex;
+    flex: auto;
     flex-direction: row;
+    max-width: fit-content;
     justify-content: center;
     align-items: center;
     padding: 13px 36px;
@@ -9,13 +11,38 @@
     border-radius: 4px;
     color: #fff;
     text-transform: uppercase;
+    margin-right: 2px;
     cursor: pointer;
 
     &:hover {
         background: #016486;
     }
+    &:focus {
+        background: #016486;
+    }
+    &:active {
+        background: #007298;
+    }
 
     &__single-icon {
-        padding: 13px;
+        flex: auto;
+        padding: 13px 10px;
+        gap: 2px;
+        size: 400%;
+        border-radius: 0;
+        margin: 0;
+        background: #fff;
+
+        color: #007298;
+    
+        &:hover {
+            color: #016486;
+        }
+        &:focus {
+            color: #016486;
+        }
+        &:active {
+            color: #007298;
+        }
     }
 }

@@ -1,13 +1,39 @@
-<app-header></app-header>
+<app-header>
+  <div>
+    <span style="display: inline-block; margin-right: 5pt;">
+      <p>{{ username }}</p>
+    </span>
+    <span style="display: inline-block;">
+      <app-button [buttonText]="logoutLoginBtn"></app-button>
+    </span>
+  </div>
+</app-header>
 <div class="app-root">
   <!-- Search component -->
   <!--<app-search></app-search>-->
 
   <!-- Info component -->
-  <!--<app-info></app-info>-->
+  <app-info [title]="infoTitle" [text]="infoText">
+    <app-button [buttonText]="addNewBtn"></app-button>
+  </app-info>
 
   <!-- Course Card component -->
-  <!--<app-course-card></app-course-card>-->
+  <app-course-card [editable]="editableVal" [title]="courseTitle" [description]="courseDesc" 
+    [creationDate]="courseCreation" [duration]="courseDuration" [authors]="courseAuthors"
+    (clickOnShow)="displayCourse()">
+    <app-button class="app-button__single-icon" [iconName]="editBtn" [hidden]=!editableVal></app-button>
+    <app-button class="app-button__single-icon" [iconName]="removeBtn" [hidden]=!editableVal></app-button>
+    
+  </app-course-card>
+
+  <!-- Course List component -->
+  <app-courses-list>
+    <li>"Test Course"</li>
+  </app-courses-list>
+
+  <!-- Course Info component -->
+  <app-course-info [title]="courseTitle" [description]="courseDesc" [id]="courseId" [creationDate]="courseCreation"
+    [duration]="courseDuration" [authors]="courseAuthors"></app-course-info>
 
   <!-- Login Form component -->
   <!--<app-login-form></app-login-form>-->

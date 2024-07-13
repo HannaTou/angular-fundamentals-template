@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import {
-  FormBuilder, FormGroup
-} from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
