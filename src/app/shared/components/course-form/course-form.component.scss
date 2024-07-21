@@ -35,3 +35,14 @@
     cursor: pointer;
   }
 }
+
+.form__control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__action {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}

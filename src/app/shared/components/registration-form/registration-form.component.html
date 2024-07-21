@@ -1,28 +1,39 @@
 <h2 class="text-align-center">Registration</h2>
 <div class="app-plate">
-  <div class="registration-form">
-    <div>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div class="registration-form">
       <div class="form__control">
         <label for="name">Name</label>
         <!--Use the name `name` for the form control.-->
-        <input type="text" id="name" placeholder="Input text"/>
-        <span id="nameErrorMessage" class="text-danger">Name is required.</span>
+        <input type="text" id="name" formControlName="name" autocomplete="off" placeholder="Input text"/>
+        <div *ngIf="registrationForm.controls.name.invalid && (registrationForm.controls.name.touched)">
+          <span *ngIf="registrationForm.controls.name.errors?.['required']" id="nameErrorMessage1" class="text-danger">Name is required.</span>
+          <span *ngIf="registrationForm.controls.name.errors?.['minlength']" id="nameErrorMessage2" class="text-danger">Name must be at least 6 characters long.</span>
+        </div>
       </div>
       <div class="form__control">
         <!--Use the name `email` for the form control.-->
         <label for="email">Email</label>
-        <input type="text" id="email" placeholder="Input text"/>
-        <span id="emailErrorMessage" class="text-danger">Email is required.</span>
+        <input type="text" id="email" formControlName="email" autocomplete="off" placeholder="Input text" emailValidator/>
+        <div *ngIf="registrationForm.controls.email.invalid && (registrationForm.controls.email.touched)">
+          <span *ngIf="registrationForm.controls.email.errors?.['required']" id="emailErrorMessage1" class="text-danger">Email is required.</span>
+          <span *ngIf="registrationForm.controls.email.errors?.['email']" id="emailErrorMessage2" class="text-danger">Email is invalid.</span>
+        </div>
       </div>
       <div class="form__control">
         <!--Use the name `password` for the form control.-->
         <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Input text"/>
-        <span id="passwordErrorMessage" class="text-danger">Password is required.</span>
+        <input type="password" id="password" formControlName="password" autocomplete="off" placeholder="Input text"/>
+        <div *ngIf="registrationForm.controls.password.invalid && (registrationForm.controls.password.touched)">
+          <span id="passwordErrorMessage" class="text-danger">Password is required.</span>
+        </div>
       </div>
     </div>
     <div class="form__action">
-      <app-button></app-button>
+      <app-button type="submit" (click)="onSubmit()" style="max-width: 100%;" [buttonText]="loginBtn"></app-button>
     </div>
-  </div>
+    <div class="form__text">
+      If you have an account you may <a routerLink="/login-form"><strong>Login</strong></a>
+    </div>
+  </form>
 </div>

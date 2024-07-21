@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +8,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
+
 export class ButtonComponent {
   constructor(library: FaIconLibrary) {
     library.addIconPacks(fas);
@@ -17,11 +18,9 @@ export class ButtonComponent {
   @Input() buttonText? : string;
   @Input() iconName! : IconProp;
   
-  getButtonColor(cl : string): string {
-    if (cl === "app-button__single-icon") {
-      return ("white");
-    } else {
-      return ("blue");
-    }
+  @Output() submit = new EventEmitter<void>();
+
+  onClick() {
+    this.submit.emit();
   }
 }

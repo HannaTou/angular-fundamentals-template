@@ -1,4 +1,5 @@
 <div class="courses-list">
+    <app-search [placeholder]="placeholder" (search)="onSearch($event)"></app-search>
     <ul>
         <ng-content></ng-content>
     </ul>

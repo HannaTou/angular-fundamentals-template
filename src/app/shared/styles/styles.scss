@@ -35,7 +35,7 @@ $color-red: #FF0000;
     &__text {
         text-align: center;
         margin-top: 38px;
-      flex-wrap: wrap;
+        flex-wrap: wrap;
     }
 }
 
@@ -46,4 +46,13 @@ $color-red: #FF0000;
 
 .text-danger {
     color: red;
+    border-color: red;
+}
+
+input {
+    height: 30px;
+  }
+
+label {
+    font-weight: bold;
 }

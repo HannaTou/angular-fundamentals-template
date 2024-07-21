@@ -6,4 +6,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: fit-content;
+}
+
+.form__control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__action {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
 }

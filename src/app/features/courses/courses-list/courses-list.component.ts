@@ -25,4 +25,10 @@ export class CoursesListComponent {
   emitDeleteCourse() {
     this.showCourse.emit();
   }
+
+  placeholder = "Input text";
+
+  onSearch(value: string){
+    console.log(value);
+  }
 }
