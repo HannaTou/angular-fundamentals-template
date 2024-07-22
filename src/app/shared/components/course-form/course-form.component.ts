@@ -16,9 +16,10 @@ export class CourseFormComponent {
     this.courseForm =  this.fb.group({
       title: ['', [Validators.required, Validators.minLength(2)]],
       description: ['', [Validators.required, Validators.minLength(2)]],
-      newAuthor: this.fb.group({
+      authorGroup: this.fb.group({
         author: ['', [Validators.pattern('[ a-zA-Z ]*'), Validators.minLength(2)]],
         authors: this.fb.array([]),
+        courseAuthors: this.fb.array([]),
       }),
       duration: ['', [
         Validators.required,
@@ -28,23 +29,47 @@ export class CourseFormComponent {
   }
   
   get authors() {
-    return this.courseForm.get('newAuthor.authors') as FormArray;
+    return this.courseForm.get('authorGroup.authors') as FormArray;
+  }
+
+  get courseAuthors() {
+    return this.courseForm.get('authorGroup.courseAuthors') as FormArray;
   }
 
   onSubmitAuthor() {
-    if (this.courseForm.get('newAuthor.author')?.invalid){
-      this.courseForm.get('newAuthor.author')?.markAsTouched({onlySelf: true});
+    if (this.courseForm.get('authorGroup.author')?.invalid){
+      this.courseForm.get('authorGroup.author')?.markAsTouched({onlySelf: true});
     } else {
-      const authorName = this.courseForm.get('newAuthor.author')?.value;
+      const authorName = this.courseForm.get('authorGroup.author')?.value;
       if (authorName) {
         this.authors.push(this.fb.control({value: authorName, disabled: true}));
-        this.courseForm.get('newAuthor.author')?.reset();
+        this.courseForm.get('authorGroup.author')?.reset();
       }
     }
   }
 
+  onAddAuthor(index: number){
+    const authorControl = this.authors.at(index);
+    this.authors.removeAt(index);
+    this.courseAuthors.push(authorControl);
+  }
+
+  onDeleteAuthor(index:number){
+    this.authors.removeAt(index);
+  }
+
+  onDeleteCourseAuthor(index: number){
+    const courseAuthorControl = this.courseAuthors.at(index);
+    this.courseAuthors.removeAt(index);
+    this.authors.push(courseAuthorControl);
+  }
+
   getAuthorControl(index: number): FormControl {
     return this.authors.at(index) as FormControl;
+  }
+
+  getCourseAuthorControl(index: number): FormControl {
+    return this.courseAuthors.at(index) as FormControl;
   }
 
   courseForm!: FormGroup;
@@ -53,7 +78,10 @@ export class CourseFormComponent {
   createAuthorBtn = "Create author";
   cancelBtn = "Cancel";
   createCourseBtn = "Create course";
+  message = "Author list is empty";
   removeBtn : IconProp = ['fas', 'trash'];
+  addBtn : IconProp = ['fas', 'plus'];
+
 
   onSubmitCourse(): void{
     if (this.courseForm.invalid){
