@@ -9,7 +9,7 @@
         <!--Use the name `title` for the form control.-->
         <input type="text" id="title" formControlName="title" placeholder="Input text"/>
         <div *ngIf="courseForm.get('title')?.invalid && courseForm.get('title')?.touched">
-          <span *ngIf="courseForm.get('titile')?.errors?.['required']" id="titleErrorMessage" class="text-danger">Title is required.</span>
+          <span *ngIf="courseForm.get('title')?.errors?.['required']" id="titleErrorMessage" class="text-danger">Title is required.</span>
           <span *ngIf="courseForm.get('title')?.errors?.['minlength']" id="titleErrorMessage" class="text-danger">Title must be at least 2 characters long.</span>
         </div>
       </div>

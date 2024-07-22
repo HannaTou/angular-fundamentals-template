@@ -32,10 +32,14 @@ export class CourseFormComponent {
   }
 
   onSubmitAuthor() {
-    const authorName = this.courseForm.get('newAuthor.author')?.value;
-    if (authorName) {
-      this.authors.push(this.fb.control({value: authorName, disabled: true}));
-      this.courseForm.get('newAuthor.author')?.reset();
+    if (this.courseForm.get('newAuthor.author')?.invalid){
+      this.courseForm.get('newAuthor.author')?.markAsTouched({onlySelf: true});
+    } else {
+      const authorName = this.courseForm.get('newAuthor.author')?.value;
+      if (authorName) {
+        this.authors.push(this.fb.control({value: authorName, disabled: true}));
+        this.courseForm.get('newAuthor.author')?.reset();
+      }
     }
   }
 
