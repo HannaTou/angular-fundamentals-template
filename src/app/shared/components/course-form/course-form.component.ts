@@ -16,9 +16,7 @@ export class CourseFormComponent {
     this.courseForm =  this.fb.group({
       title: ['', [Validators.required, Validators.minLength(2)]],
       description: ['', [Validators.required, Validators.minLength(2)]],
-      newAuthor: this.fb.group({
-        author: ['', [Validators.pattern('^[ \u0041-\u005A\u0061-\u007A0-9]+$'), Validators.minLength(2)]],        
-      }),
+      author: ['', [Validators.pattern('^[ \u0041-\u005A\u0061-\u007A0-9]+$'), Validators.minLength(2)]],        
       authors: this.fb.array([]),
       courseAuthors: this.fb.array([]),
       duration: ['', [
@@ -37,12 +35,12 @@ export class CourseFormComponent {
   }
 
   get newAuthorName() {
-    return this.courseForm.get('newAuthor.author');
+    return this.courseForm.get('author');
   }
 
   onSubmitAuthor() {
-    if (this.courseForm.get('newAuthor.author')?.invalid){
-      this.courseForm.get('newAuthor.author')?.markAsTouched({onlySelf: true});
+    if (this.courseForm.get('author')?.invalid){
+      this.courseForm.get('author')?.markAsTouched({onlySelf: true});
     } else {
       const newAuthorControl = this.fb.control(this.newAuthorName?.value, [Validators.minLength(2), Validators.pattern('^[ \u0041-\u005A\u0061-\u007A0-9]+$')]);
       this.authors.push(newAuthorControl);

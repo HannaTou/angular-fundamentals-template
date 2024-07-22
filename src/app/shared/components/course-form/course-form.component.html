@@ -51,7 +51,7 @@
       <div style="display: flex;">        
         <div class="form__control" style="flex: 2;">
           <h3>Authors</h3>
-          <div class="course__flex" formGroupName="newAuthor">
+          <div class="course__flex">
             <!--Use the name `author` for the form control.-->
             <div style="display: grid; flex-direction: column;">
               <label for="author">Author Name</label>
@@ -61,9 +61,9 @@
               </div>
             </div>
           </div>
-          <div *ngIf="courseForm.get('newAuthor.author')?.invalid && courseForm.get('newAuthor.author')?.touched">
-            <span *ngIf="courseForm.get('newAuthor.author')?.errors?.['pattern']" id="authorErrorMessage">New author should contain only latin letters and numbers.</span>
-            <span *ngIf="courseForm.get('newAuthor.author')?.errors?.['minlength']" class="text-danger" id="authorErrorMessage">New author name must be at least 2 characters long.</span>
+          <div *ngIf="courseForm.get('author')?.invalid && courseForm.get('author')?.touched">
+            <span *ngIf="courseForm.get('author')?.errors?.['pattern']" id="authorErrorMessage">New author should contain only latin letters and numbers.</span>
+            <span *ngIf="courseForm.get('author')?.errors?.['minlength']" class="text-danger" id="authorErrorMessage">New author name must be at least 2 characters long.</span>
           </div>
           <div class="course__authors">
             <!--Use the name `authors` for the form array.-->
