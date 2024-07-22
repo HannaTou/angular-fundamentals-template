@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { FormControl, NgForm } from '@angular/forms';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-login-form',
@@ -14,6 +15,9 @@ export class LoginFormComponent {
   password! : FormControl;
 
   loginBtn = "Login";
+  toggleOffBtn : IconProp = ['fas', 'eye'];
+  toggleOnBtn : IconProp = ['fas', 'eye-slash'];
+  
 
   onSubmit(form: NgForm){
     if (this.loginForm.invalid){

@@ -23,7 +23,10 @@
       <div class="form__control">
         <!--Use the name `password` for the form control.-->
         <label for="password">Password</label>
-        <input type="password" id="password" formControlName="password" autocomplete="off" placeholder="Input text"/>
+        <div style="display: flex; justify-content: space-between;">
+          <input style="flex: 1;" type="password" id="password" formControlName="password" autocomplete="off" placeholder="Input text" appTogglePassword #togglePwd="TogglePasswordDirective"/>
+          <app-button (click)="togglePwd.toggleType()" [iconName]="togglePwd.type === 'text' ? toggleOffBtn : toggleOnBtn">Toggle Password</app-button>
+        </div>
         <div *ngIf="registrationForm.controls.password.invalid && (registrationForm.controls.password.touched)">
           <span id="passwordErrorMessage" class="text-danger">Password is required.</span>
         </div>

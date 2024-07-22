@@ -16,11 +16,11 @@ export class CourseFormComponent {
     this.courseForm =  this.fb.group({
       title: ['', [Validators.required, Validators.minLength(2)]],
       description: ['', [Validators.required, Validators.minLength(2)]],
-      authorGroup: this.fb.group({
-        newAuthor: ['', [Validators.pattern('[ a-zA-Z ]*'), Validators.minLength(2)]],
-        authors: this.fb.array([]),
-        courseAuthors: this.fb.array([]),
+      newAuthor: this.fb.group({
+        author: ['', [Validators.pattern('^[ \u0041-\u005A\u0061-\u007A0-9]+$'), Validators.minLength(2)]],        
       }),
+      authors: this.fb.array([]),
+      courseAuthors: this.fb.array([]),
       duration: ['', [
         Validators.required,
         Validators.min(0)
@@ -29,22 +29,24 @@ export class CourseFormComponent {
   }
   
   get authors() {
-    return this.courseForm.get('authorGroup.authors') as FormArray;
+    return this.courseForm.get('authors') as FormArray;
   }
 
   get courseAuthors() {
-    return this.courseForm.get('authorGroup.courseAuthors') as FormArray;
+    return this.courseForm.get('courseAuthors') as FormArray;
+  }
+
+  get newAuthorName() {
+    return this.courseForm.get('newAuthor.author');
   }
 
   onSubmitAuthor() {
-    if (this.courseForm.get('authorGroup.newAuthor')?.invalid){
-      this.courseForm.get('authorGroup.newAuthor')?.markAsTouched({onlySelf: true});
+    if (this.courseForm.get('newAuthor.author')?.invalid){
+      this.courseForm.get('newAuthor.author')?.markAsTouched({onlySelf: true});
     } else {
-      const authorName = this.courseForm.get('authorGroup.newAuthor')?.value;
-      if (authorName) {
-        this.authors.push(this.fb.control({value: authorName, disabled: true}));
-        this.courseForm.get('authorGroup.newAuthor')?.reset();
-      }
+      const newAuthorControl = this.fb.control(this.newAuthorName?.value, [Validators.minLength(2), Validators.pattern('^[ \u0041-\u005A\u0061-\u007A0-9]+$')]);
+      this.authors.push(newAuthorControl);
+      this.newAuthorName?.reset();
     }
   }
 

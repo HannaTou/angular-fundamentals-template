@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-registration-form',
@@ -27,5 +28,7 @@ export class RegistrationFormComponent {
   }
 
   loginBtn = "Login";
+  toggleOffBtn : IconProp = ['fas', 'eye'];
+  toggleOnBtn : IconProp = ['fas', 'eye-slash'];
 
 }
