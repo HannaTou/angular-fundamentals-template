@@ -55,16 +55,16 @@
           <div class="course__flex" formGroupName="authorGroup">
             <!--Use the name `author` for the form control.-->
             <div style="display: grid; flex-direction: column;">
-              <label for="author">Author Name</label>
+              <label for="newAuthor">Author Name</label>
               <div style="display: flex;">
-                <input type="text" id="author" formControlName="author" placeholder="Input Author Name"/>
+                <input type="text" id="newAuthor" formControlName="newAuthor" placeholder="Input Author Name"/>
                 <app-button id="createAuthor" (click)="onSubmitAuthor()" [buttonText]="createAuthorBtn"></app-button>
               </div>
             </div>
           </div>
-          <div *ngIf="courseForm.get('authorGroup.author')?.invalid && courseForm.get('authorGroup.author')?.touched">
-            <span *ngIf="courseForm.get('authorGroup.author')?.errors?.['pattern']" id="authorErrorMessage">New author should contain only latin letters and numbers.</span>
-            <span *ngIf="courseForm.get('authorGroup.author')?.errors?.['minlength']" class="text-danger" id="authorErrorMessage">New author name must be at least 2 characters long.</span>
+          <div *ngIf="courseForm.get('authorGroup.newAuthor')?.invalid && courseForm.get('authorGroup.newAuthor')?.touched">
+            <span *ngIf="courseForm.get('authorGroup.newAuthor')?.errors?.['pattern']" id="authorErrorMessage">New author should contain only latin letters and numbers.</span>
+            <span *ngIf="courseForm.get('authorGroup.newAuthor')?.errors?.['minlength']" class="text-danger" id="authorErrorMessage">New author name must be at least 2 characters long.</span>
           </div>
           <div class="course__authors">
             <!--Use the name `authors` for the form array.-->
@@ -73,8 +73,8 @@
               <div formArrayName="authors">
                 <div *ngFor="let authorControl of authors.controls; let i = index" style="display: flex;">
                   <input type="text" [formControl]="getAuthorControl(i)">
-                  <app-button (click)="onAddAuthor(i)" [iconName]="addBtn"></app-button>
-                  <app-button (click)="onDeleteAuthor(i)" [iconName]="removeBtn"></app-button>
+                  <app-button id="add" (click)="onAddAuthor(i)" [iconName]="addBtn"></app-button>
+                  <app-button id="delete" (click)="onDeleteAuthor(i)" [iconName]="removeBtn"></app-button>
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@
           <div formArrayName="courseAuthors">
             <div *ngFor="let courseAuthorControl of courseAuthors.controls; let i = index" style="display: flex;">
               <input type="text" [formControl]="getCourseAuthorControl(i)">
-              <app-button (click)="onDeleteCourseAuthor(i)" [iconName]="removeBtn"></app-button>
+              <app-button id="delete" (click)="onDeleteCourseAuthor(i)" [iconName]="removeBtn"></app-button>
             </div>            
           </div>
         </div>

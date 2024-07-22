@@ -17,7 +17,7 @@ export class CourseFormComponent {
       title: ['', [Validators.required, Validators.minLength(2)]],
       description: ['', [Validators.required, Validators.minLength(2)]],
       authorGroup: this.fb.group({
-        author: ['', [Validators.pattern('[ a-zA-Z ]*'), Validators.minLength(2)]],
+        newAuthor: ['', [Validators.pattern('[ a-zA-Z ]*'), Validators.minLength(2)]],
         authors: this.fb.array([]),
         courseAuthors: this.fb.array([]),
       }),
@@ -37,13 +37,13 @@ export class CourseFormComponent {
   }
 
   onSubmitAuthor() {
-    if (this.courseForm.get('authorGroup.author')?.invalid){
-      this.courseForm.get('authorGroup.author')?.markAsTouched({onlySelf: true});
+    if (this.courseForm.get('authorGroup.newAuthor')?.invalid){
+      this.courseForm.get('authorGroup.newAuthor')?.markAsTouched({onlySelf: true});
     } else {
-      const authorName = this.courseForm.get('authorGroup.author')?.value;
+      const authorName = this.courseForm.get('authorGroup.newAuthor')?.value;
       if (authorName) {
         this.authors.push(this.fb.control({value: authorName, disabled: true}));
-        this.courseForm.get('authorGroup.author')?.reset();
+        this.courseForm.get('authorGroup.newAuthor')?.reset();
       }
     }
   }
@@ -81,7 +81,6 @@ export class CourseFormComponent {
   message = "Author list is empty";
   removeBtn : IconProp = ['fas', 'trash'];
   addBtn : IconProp = ['fas', 'plus'];
-
 
   onSubmitCourse(): void{
     if (this.courseForm.invalid){
