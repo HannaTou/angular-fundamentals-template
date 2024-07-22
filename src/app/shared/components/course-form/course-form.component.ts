@@ -14,10 +14,10 @@ export class CourseFormComponent {
   constructor(public fb: FormBuilder, public library: FaIconLibrary) {
     library.addIconPacks(fas);
     this.courseForm =  this.fb.group({
-      title: ['', Validators.required],
-      description: ['', Validators.required],
+      title: ['', [Validators.required, Validators.minLength(2)]],
+      description: ['', [Validators.required, Validators.minLength(2)]],
       newAuthor: this.fb.group({
-        author: ['', Validators.pattern('[ 0-9a-zA-Z ]*')],
+        author: ['', [Validators.pattern('[ a-zA-Z ]*'), Validators.minLength(2)]],
         authors: this.fb.array([]),
       }),
       duration: ['', [

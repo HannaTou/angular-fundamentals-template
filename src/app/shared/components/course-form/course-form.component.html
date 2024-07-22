@@ -9,7 +9,8 @@
         <!--Use the name `title` for the form control.-->
         <input type="text" id="title" formControlName="title" placeholder="Input text"/>
         <div *ngIf="courseForm.get('title')?.invalid && courseForm.get('title')?.touched">
-          <span id="titleErrorMessage" class="text-danger">Title is required.</span>
+          <span *ngIf="courseForm.get('titile')?.errors?.['required']" id="titleErrorMessage" class="text-danger">Title is required.</span>
+          <span *ngIf="courseForm.get('title')?.errors?.['minlength']" id="titleErrorMessage" class="text-danger">Title must be at least 2 characters long.</span>
         </div>
       </div>
       <div class="form__control">
@@ -24,7 +25,8 @@
           cols="5"
         ></textarea>
         <div *ngIf="courseForm.get('description')?.invalid && courseForm.get('description')?.touched">
-          <span id="descriptionErrorMessage" class="text-danger">Description is required.</span>
+          <span *ngIf="courseForm.get('description')?.errors?.['required']" id="descriptionErrorMessage" class="text-danger">Description is required.</span>
+          <span *ngIf="courseForm.get('description')?.errors?.['minlength']" id="descriptionErrorMessage" class="text-danger">Description must be at least 2 characters long.</span>
         </div>
       </div>
       <div class="separator"></div>
@@ -59,12 +61,13 @@
           </div>
         </div>
         <div *ngIf="courseForm.get('newAuthor.author')?.invalid && courseForm.get('newAuthor.author')?.touched">
-          <span id="authorErrorMessage">New author should contain only latin letters and numbers.</span>
+          <span *ngIf="courseForm.get('newAuthor.author')?.errors?.['pattern']" id="authorErrorMessage">New author should contain only latin letters and numbers.</span>
+          <span *ngIf="courseForm.get('newAuthor.author')?.errors?.['minlength']" class="text-danger" id="authorErrorMessage">New author name must be at least 2 characters long.</span>
         </div>
         <div class="course__authors">
           <!--Use the name `authors` for the form array.-->
           <div formGroupName="newAuthor">
-            <label for="authors">Authors List</label>
+            <label for="authors">Course Authors</label>
             <div formArrayName="authors">
               <div *ngFor="let authorControl of authors.controls; let i = index" style="display: flex;">
                 <input type="text" [formControl]="getAuthorControl(i)">
