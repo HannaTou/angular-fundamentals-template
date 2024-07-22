@@ -7,9 +7,9 @@
         <!--Use the name `name` for the form control.-->
         <input type="text" id="name" formControlName="name" autocomplete="off" placeholder="Input text"/>
         <div *ngIf="registrationForm.controls.name.invalid && (registrationForm.controls.name.touched)">
-          <span *ngIf="registrationForm.controls.name.errors?.['required']" id="nameErrorMessage1" class="text-danger">Name is required.</span>
-          <span *ngIf="registrationForm.controls.name.errors?.['minlength']" id="nameErrorMessage2" class="text-danger">Name must be at least 6 characters long.</span>
-          <span *ngIf="registrationForm.controls.name.errors?.['pattern']" id="nameErrorMessage3" class="text-danger">Name should contain only latin letters and numbers.</span>
+          <span *ngIf="registrationForm.controls.name.errors?.['required']" id="nameErrorMessage" class="text-danger">Name is required.</span>
+          <span *ngIf="registrationForm.controls.name.errors?.['minlength']" id="nameErrorMessage" class="text-danger">Name must be at least 6 characters long.</span>
+          <span *ngIf="registrationForm.controls.name.errors?.['pattern']" id="nameErrorMessage" class="text-danger">Name should contain only latin letters and numbers.</span>
         </div>
       </div>
       <div class="form__control">
@@ -17,8 +17,8 @@
         <label for="email">Email</label>
         <input type="text" id="email" formControlName="email" autocomplete="off" placeholder="Input text" emailValidator/>
         <div *ngIf="registrationForm.controls.email.invalid && (registrationForm.controls.email.touched)">
-          <span *ngIf="registrationForm.controls.email.errors?.['required']" id="emailErrorMessage1" class="text-danger">Email is required.</span>
-          <span *ngIf="registrationForm.controls.email.value&&registrationForm.controls.email.errors?.['email']" id="emailErrorMessage2" class="text-danger">Email is invalid.</span>
+          <span *ngIf="registrationForm.controls.email.errors?.['required']" id="emailErrorMessage" class="text-danger">Email is required.</span>
+          <span *ngIf="registrationForm.controls.email.value&&registrationForm.controls.email.errors?.['email']" id="emailErrorMessage" class="text-danger">Email is invalid.</span>
         </div>
       </div>
       <div class="form__control">

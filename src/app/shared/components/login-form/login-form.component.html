@@ -8,8 +8,8 @@
           <!--Use the name `email` for the form control.-->
           <input type="text" name="email" id="reg-email" autocomplete="off" ngModel #email="ngModel" placeholder="Input text" required emailValidator/>
           <div *ngIf="email.invalid && (email.touched || loginForm.submitted)" class="alert">
-            <span *ngIf="email.errors?.['required']" id="emailErrorMessage1" class="text-danger">Email is required.</span>
-            <span *ngIf="email.value&&email.errors?.['email']" id="emailErrorMessage2" class="text-danger">Email is invalid.</span>
+            <span *ngIf="email.errors?.['required']" id="emailErrorMessage" class="text-danger">Email is required.</span>
+            <span *ngIf="email.value&&email.errors?.['email']" id="emailErrorMessage" class="text-danger">Email is invalid.</span>
           </div>
         </div>
         <div class="form__control">
