@@ -65,6 +65,10 @@ export class CoursesComponent implements OnInit {
   }
 
   onAdd() {
-    this.router.navigate(['/add']);
+    this.router.navigate(['/courses/add']);
+    const currentUrl = this.router.url;
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate([currentUrl]);
+    });
   }
 }
