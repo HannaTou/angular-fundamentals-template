@@ -16,46 +16,46 @@ export class CoursesService {
 
     getAll() {
         // Add your code here
-        return this.http.get('/courses');
+        return this.http.get('http://localhost:4000/courses/all');
     }
 
     createCourse(course: Observable<any>) { // replace 'any' with the required interface
         // Add your code here
-        return this.http.post('/courses', course);
+        return this.http.post('http://localhost:4000/courses/add', course);
     }
 
     editCourse(id: string, course: Observable<any>) { // replace 'any' with the required interface
         // Add your code here
-        return this.http.put(`/courses/${id}`, course);
+        return this.http.put(`http://localhost:4000/courses/${id}`, course);
     }
 
     getCourse(id: string) {
         // Add your code here
-        return this.http.get(`/courses/${id}`);
+        return this.http.get(`http://localhost:4000/courses/${id}`);
     }
 
     deleteCourse(id: string) {
         // Add your code here
-        return this.http.delete(`/courses/${id}`);
+        return this.http.delete(`http://localhost:4000/courses/${id}`);
     }
 
-    filterCourses(value: string): Observable<Course[]> {
+    filterCourses(value: string): Observable<any> {
         // Add your code here
-        return this.http.get<Course[]>(`/courses?filter=${value}`);
+        return this.http.get(`http://localhost:4000/courses/filter?=${value}`);
     }
 
     getAllAuthors() {
         // Add your code here
-        return this.http.get('/authors');
+        return this.http.get('http://localhost:4000/authors/all');
     }
 
     createAuthor(name: string) {
         // Add your code here
-        return this.http.post('/authors', { name });
+        return this.http.post('http://localhost:4000/authors/add', { name });
     }
 
     getAuthorById(id: string) {
         // Add your code here
-        return this.http.get(`/authors/${id}`);
+        return this.http.get(`http://localhost:4000/authors/${id}`);
     }
 }

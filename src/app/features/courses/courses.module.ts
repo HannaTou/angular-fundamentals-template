@@ -31,4 +31,5 @@ export interface Course {
     duration: number;
     authors: string[];
   }
+
   

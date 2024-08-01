@@ -5,13 +5,14 @@ import { catchError } from 'rxjs/operators';
 import { AuthService } from '@app/auth/services/auth.service';
 import { Router } from '@angular/router';
 
+const TOKEN = 'SESSION_TOKEN';
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
     // Add your code here
     constructor(private authService: AuthService, private router: Router) {}
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-      const token = this.authService.getToken();
+      const token = window.sessionStorage.getItem(TOKEN);
       if (token) {
         request = request.clone({
           setHeaders: {
