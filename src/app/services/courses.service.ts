@@ -39,7 +39,7 @@ export class CoursesService {
         return this.http.delete(`http://localhost:4000/courses/${id}`);
     }
 
-    filterCourses(value: string): Observable<any> {
+    filterCourses(value: string[]): Observable<any> {
         // Add your code here
         return this.http.get(`http://localhost:4000/courses/filter?value=${value}`);
     }

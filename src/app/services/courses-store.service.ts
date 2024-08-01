@@ -66,7 +66,7 @@ export class CoursesStoreService {
           ).subscribe();
     }
 
-    filterCourses(value: string) {
+    filterCourses(value: string[]) {
         // Add your code here
         this.isLoading$$.next(true);
         this.coursesService.filterCourses(value).pipe(
@@ -92,7 +92,7 @@ export class CoursesStoreService {
         return this.coursesService.getAuthorById(id);
     }
 
-    searchCourses(value: string): void {
+    searchCourses(value: string[]): void {
         this.isLoading$$.next(true);
         this.coursesService.filterCourses(value).pipe(
           tap((courses: Course[]) => {

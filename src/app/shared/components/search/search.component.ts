@@ -14,7 +14,7 @@ export class SearchComponent {
   public searchForm!: NgForm;
 
   searchBtn = "Search";
-  searchInput: string = '';
+  searchInput: string[] = [];
 
   @Input() placeholder?: string;
   @Output() search = new EventEmitter<string>();
@@ -23,7 +23,7 @@ export class SearchComponent {
 
   onSubmit(): void {
     this.coursesStore.searchCourses(this.searchInput);
-    this.search.emit(this.searchInput);
+    this.search.emit(this.searchInput[0]);
 //    this.search.emit(value);
   }
 }
