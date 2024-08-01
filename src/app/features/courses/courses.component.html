@@ -1,6 +1,6 @@
 <div style="display: flex; justify-content: space-between;">
 <app-search [placeholder]="placeholder" (search)="onSearch($event)"></app-search>
-<app-button (click)="onAdd()" [buttonText] = "addCourseBtn"></app-button>
+<app-button *ngIf="isAdmin" (click)="onAdd()" [buttonText] = "addCourseBtn"></app-button>
 </div>
 <div *ngIf="courses$ | async as courses; else loading">
   <div *ngIf="courses.length > 0; else noResults">

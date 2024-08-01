@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { UserStoreService } from '@app/user/services/user-store.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
@@ -9,6 +10,11 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class CourseCardComponent {
 
+  isAdmin?: boolean;
+
+  constructor(
+    private userStoreService: UserStoreService,
+  ) {}
   // course$: Observable;
 
   // constructor(
@@ -19,6 +25,12 @@ export class CourseCardComponent {
   //   const courseId = this.route.snapshot.paramMap.get('id');
   //   this.course$ = this.service.getHero(courseId);
   // }
+
+  ngOnInit(): void {
+    this.userStoreService.isAdmin$.subscribe(isAdmin => {
+      this.isAdmin = isAdmin;
+    });
+  }
 
   @Input() editable! : boolean;
   @Input() title! : string;

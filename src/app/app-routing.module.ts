@@ -13,10 +13,8 @@ export const routes: Routes = [
     { path: 'login', component: LoginFormComponent, canActivate: [NotAuthorizedGuard] },
     { path: 'courses', component: CoursesComponent,
         children: [
-            { path: ':id', component: CourseCardComponent, canActivate: [AuthorizedGuard],
-                children: [
-                    { path: 'edit', component: CourseFormComponent, canActivate: [AuthorizedGuard, AdminGuard] }
-                ] },
+            { path: ':id', component: CourseCardComponent, canActivate: [AuthorizedGuard] },
+            { path: 'edit/:id', component: CourseFormComponent, canActivate: [AuthorizedGuard, AdminGuard] },
             { path: 'add', component: CourseFormComponent, canActivate: [AuthorizedGuard, AdminGuard] },
         ],
         canActivate: [AuthorizedGuard] },

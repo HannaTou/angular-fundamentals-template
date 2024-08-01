@@ -7,6 +7,7 @@ import { CoursesStoreService } from '../../../services/courses-store.service';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
+
 export class SearchComponent {
   // Use the name `placeholder` for the @Input.
   // Use the name `search` for the @Output.

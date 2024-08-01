@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
-import { User } from '../user.module';
+import { Observable, } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -13,7 +11,9 @@ export class UserService {
 
     getUser(): Observable<any> {
         // Add your code here
+//        this.http.get(this.getUserUrl()).forEach((item) => console.log(item));
         return this.http.get(this.getUserUrl());
+
     }
 
     private getUserUrl(): string {

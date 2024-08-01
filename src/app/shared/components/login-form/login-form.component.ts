@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { FormControl, NgForm } from '@angular/forms';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { AuthService } from '@app/auth/services/auth.service';
-import { User } from '@app/user/user.module';
+//import { User } from '@app/user/user.module';
 
 @Component({
   selector: 'app-login-form',
@@ -20,7 +20,7 @@ export class LoginFormComponent {
   toggleOffBtn : IconProp = ['fas', 'eye'];
   toggleOnBtn : IconProp = ['fas', 'eye-slash'];
   
-  user: User = { name: '', email: '', password: '', role: 'user', isAdmin: false };
+  //user: User = { name: '', email: '', password: '', role: 'user', isAdmin: false };
 
   constructor (private authService: AuthService) {};
 

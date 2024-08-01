@@ -15,6 +15,7 @@ import { AdminGuard } from "./guards/admin.guard";
         AdminGuard
     ]
 })
+
 export class UserModule { }
 
 export interface User {

@@ -20,4 +20,5 @@ import { CoursesService } from '@app/services/courses.service';
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
+
 export class CourseInfoModule {}
