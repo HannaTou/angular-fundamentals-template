@@ -1,0 +1,26 @@
+<div style="display: flex; justify-content: space-between;">
+<app-search [placeholder]="placeholder" (search)="onSearch($event)"></app-search>
+<app-button (click)="onAdd()" [buttonText] = "addCourseBtn"></app-button>
+</div>
+<div *ngIf="courses$ | async as courses; else loading">
+  <div *ngIf="courses.length > 0; else noResults">
+    <h1>Courses</h1>
+    <div *ngFor="let course of courses">
+      <h2>{{ course.title }}</h2>
+      <p>{{ course.description }}</p>
+      <p>Created on: {{ course.creationDate }}</p>
+      <p>Duration: {{ course.duration }} minutes</p>
+      <ng-content></ng-content>
+      <app-course-info [title]="course.title" [description]="course.description" [id]="course.id" [creationDate]="course.creationDate"
+      [duration]="course.duration" [authors]="course.authors"></app-course-info>
+    </div>
+  </div>
+  <ng-template style="display: grid; align-content: center;" #noResults>
+    <p class="no-results">Your list is empty</p>
+    <p class="no-results">Please use "add New Course" button to add your first course</p>
+    <app-button *ngIf="isAdmin" (click)="onAdd()" [buttonText]="addCourseBtn"></app-button>
+  </ng-template>
+</div>
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>

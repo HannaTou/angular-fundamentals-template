@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { NgForm } from '@angular/forms'; 
+import { NgForm } from '@angular/forms';
+import { CoursesStoreService } from '../../../services/courses-store.service';
 
 @Component({
   selector: 'app-search',
@@ -12,12 +13,16 @@ export class SearchComponent {
   public searchForm!: NgForm;
 
   searchBtn = "Search";
-  searchInput = '';
+  searchInput: string = '';
 
   @Input() placeholder?: string;
   @Output() search = new EventEmitter<string>();
 
-  onSubmit(value: any) {
-    this.search.emit(value);
+  constructor(private coursesStore: CoursesStoreService) {}
+
+  onSubmit(): void {
+    this.coursesStore.searchCourses(this.searchInput);
+    this.search.emit(this.searchInput);
+//    this.search.emit(value);
   }
 }

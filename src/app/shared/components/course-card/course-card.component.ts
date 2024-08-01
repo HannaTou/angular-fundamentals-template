@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-course-card',
@@ -7,6 +8,17 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
   styleUrls: ['./course-card.component.scss']
 })
 export class CourseCardComponent {
+
+  // course$: Observable;
+
+  // constructor(
+  //   private route: ActivatedRoute,
+  // ) {}
+  
+  // ngOnInit() {
+  //   const courseId = this.route.snapshot.paramMap.get('id');
+  //   this.course$ = this.service.getHero(courseId);
+  // }
 
   @Input() editable! : boolean;
   @Input() title! : string;

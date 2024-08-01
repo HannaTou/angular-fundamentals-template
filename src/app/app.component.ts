@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { Router } from '@angular/router';
+import { AuthService } from '@app/auth/services/auth.service';
+import { UserStoreService } from './user/services/user-store.service';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +12,35 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export class AppComponent {
   title = 'courses-app';
-  username = "Harry Potter";
-  logoutLoginBtn = this.username ? "Logout" : "Login";
+
+  isLoggedIn: boolean = false;
+  username: string = '';
+  logoutLoginBtn: string = 'Login';
+
+  constructor(private authService: AuthService, private userStoreService: UserStoreService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.authService.isAuthorized$.subscribe(isAuthorized => {
+      this.isLoggedIn = isAuthorized;
+      this.logoutLoginBtn = isAuthorized ? 'Logout' : 'Login';
+      if (isAuthorized) {
+        this.username = this.userStoreService.name;
+      }
+    });
+  }
+
+  handleButtonClick(): void {
+    if (this.isLoggedIn) {
+      this.authService.logout().subscribe(() => {
+        this.router.navigate(['/login']);
+      });
+    } else {
+      this.router.navigate(['/login']);
+    }
+  }
+
+  //username = "Harry Potter";
+  //logoutLoginBtn = this.username ? "Logout" : "Login";
 
   infoTitle = "Your List is empty";
   infoText = "Please use 'Add New Course' button to add your first course";

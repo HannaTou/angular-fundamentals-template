@@ -15,7 +15,10 @@
         <div class="form__control">
           <label for="password">Password</label>
           <!--Use the name `password` for the form control.-->
-          <input type="password" name="password" id="reg-password" autocomplete="off" ngModel #password="ngModel" placeholder="Input text" required/>
+          <div style="display: flex; justify-content: space-between;">
+            <input style="flex: 1;" type="password" name="password" id="reg-password" autocomplete="off" ngModel #password="ngModel" placeholder="Input text" required appTogglePassword #togglePwd="toggle"/>
+            <app-button (click)="togglePwd.toggleType()" [iconName]="togglePwd.type === 'text' ? toggleOffBtn : toggleOnBtn">Toggle Password</app-button>
+          </div>
           <div *ngIf="password.invalid && (password.touched || loginForm.submitted)" class="alert">
             <span id="passwordErrorMessage" class="text-danger">Password is required.</span>
           </div>
@@ -26,9 +29,10 @@
           <app-button type="submit" (click)="onSubmit(loginForm)" style="max-width: 100%;" [buttonText]="loginBtn"></app-button>
         </div>
         <div class="form__text">
-          If you don't have an account you may <a routerLink="registration-form"><strong>Registration</strong></a>
+          If you don't have an account you may <a routerLink="/registration" routerLinkActive="active"><strong>Registration</strong></a>
         </div>
       </div>
     </div>
   </form>
 </div>
+<router-outlet></router-outlet>

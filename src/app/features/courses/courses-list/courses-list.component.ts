@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { CourseCardComponent } from '@app/shared/components';
+import { CourseInfoComponent } from '../../course-info/course-info.component';
 
 @Component({
   selector: 'app-courses-list',
@@ -9,7 +9,8 @@ import { CourseCardComponent } from '@app/shared/components';
 
 export class CoursesListComponent {
   // Use the names for the input `course`.
-  @Input() course! : CourseCardComponent;
+  courses = [];
+  @Input() course! : CourseInfoComponent;
   @Input() editable! : boolean;
 
   @Output() showCourse = new EventEmitter<void>();

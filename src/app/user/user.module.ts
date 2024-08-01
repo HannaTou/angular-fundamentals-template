@@ -4,7 +4,6 @@ import { UserService } from "./services/user.service";
 import { UserStoreService } from "./services/user-store.service";
 import { AdminGuard } from "./guards/admin.guard";
 
-
 @NgModule({
     declarations: [],
     imports: [
@@ -17,3 +16,12 @@ import { AdminGuard } from "./guards/admin.guard";
     ]
 })
 export class UserModule { }
+
+export interface User {
+    name: string;
+    email: string;
+    password: string;
+    role: string;
+    isAdmin: boolean;
+    // add other properties as necessary
+  }
