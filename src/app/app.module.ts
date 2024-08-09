@@ -9,22 +9,12 @@ import { CoursesModule } from '@features/courses/courses.module';
 import { NotAuthorizedGuard } from '@app/auth/guards/not-authorized.guard';
 import { AuthorizedGuard } from '@app/auth/guards/authorized.guard';
 import { CoursesStoreService } from '@app/services/courses-store.service';
-//import { UserStoreService } from './user/services/user-store.service';
 import { CoursesService } from '@app/services/courses.service';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-
-//export const WINDOW = new InjectionToken<Window>('WindowToken');
-
-//export function windowFactory(): Window {
-//  return window;
-//}
-
-// function initializeApp(userStoreService: UserStoreService) {
-//   return (): Promise<any> => {
-//     return userStoreService.getUser().toPromise();
-//   }
-// }
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import {reducers, effects} from './store/index';
 
 @NgModule({
   declarations: [AppComponent],
@@ -37,6 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot(effects),
   ],
   providers: [
     AuthorizedGuard,
@@ -44,8 +36,6 @@ import { HttpClientModule } from '@angular/common/http';
     CoursesService,
     CoursesStoreService,
     { provide: Window, useValue: window },
-//    { provide: WINDOW, useFactory: () => window },
-//    { provide: APP_INITIALIZER, useFactory: initializeApp, deps: [UserStoreService], multi: true }
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

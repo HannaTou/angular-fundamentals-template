@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { BehaviorSubject, Observable, catchError, throwError, map, of, forkJoin } from 'rxjs';
 import { CoursesService } from './courses.service';
-import { Course } from '../features/courses/courses.module';
+import { tap, finalize, switchMap } from 'rxjs/operators';
+
 
 @Injectable({
     providedIn: 'root'
@@ -15,44 +15,122 @@ export class CoursesStoreService {
     private courses$$ = new BehaviorSubject<any[]>([]);
     public courses$ = this.courses$$.asObservable();
 
+    authors: string[] = [];
+
     constructor(private coursesService: CoursesService) {}
     
-    getAll(){
+    getAll(): Observable<any> {
         // Add your code here
         this.isLoading$$.next(true);
-        this.coursesService.getAll().pipe(
-            tap((courses: any) => {
-                this.courses$$.next(courses);
-                this.isLoading$$.next(false);
-            })
-          ).subscribe();
+        return this.coursesService.getAll().pipe(
+            switchMap(response => {
+                if (!response.successful) {
+                    throw new Error('Failed to fetch courses');
+                }
+                return forkJoin(
+                    response.result.map((course: any) => 
+                        forkJoin(
+                            course.authors.map((authorId: string) => 
+                                this.getAuthorById(authorId)
+                            )
+                        ).pipe(
+                            map(authorNames => ({
+                                ...course,
+                                authors: authorNames
+                            }))
+                        )
+                    )
+                );
+            }),
+            tap((coursesWithAuthors: any) => {
+                this.courses$$.next(coursesWithAuthors);
+            }),
+            catchError(error => {
+                console.error('Error fetching courses:', error);
+                this.courses$$.next([]);
+                return of([]);
+            }),
+            tap(() => this.isLoading$$.next(false))
+        );
     }
 
-    createCourse(course: Observable<Course>) { // replace 'any' with the required interface
+    filterCourses(value: string[]): any {
+      // Add your code here
+      this.isLoading$$.next(true);
+      this.coursesService.filterCourses(value).pipe(
+          switchMap(response => {
+              if (!response.successful) {
+                  throw new Error('Failed to fetch filtered courses');
+              }
+              return forkJoin(
+                  response.result.map((course: any) => 
+                      forkJoin(
+                          course.authors.map((authorId: any) => 
+                              this.getAuthorById(authorId)
+                          )
+                      ).pipe(
+                          map(authorNames => ({
+                              ...course,
+                              authors: authorNames
+                          }))
+                      )
+                  )
+              );
+          }),
+          map((coursesWithAuthors: any) => {
+              this.courses$$.next(coursesWithAuthors);
+              return coursesWithAuthors;
+          }),
+          catchError(error => {
+              console.error('Error filtering courses:', error);
+              this.courses$$.next([]);
+              return of([]);
+          }),
+          finalize(() => this.isLoading$$.next(false))
+      ).subscribe();}
+
+    createCourse(course: any) { // replace 'any' with the required interface
         // Add your code here
         this.isLoading$$.next(true);
         this.coursesService.createCourse(course).pipe(
             tap(() => {
                 this.getAll();
                 this.isLoading$$.next(false);
-            })
-          ).subscribe();
-    }
-
-    getCourse(id: string) {
-        // Add your code here
-        return this.coursesService.getCourse(id);
-    }
-
-    editCourse(id: string, course: Observable<Course>) { // replace 'any' with the required interface
-        // Add your code here
-        this.isLoading$$.next(true);
-        this.coursesService.editCourse(id, course).pipe(
-            tap(() => {
-                this.getAll();
+            }),
+            catchError(error => {
+                console.error('Failed to create course', error);
                 this.isLoading$$.next(false);
+                return throwError(() => new Error('Failed to create course'));
             })
-          ).subscribe();
+        ).subscribe();
+    }
+
+    getCourse(id: string): Observable<any> {
+        // Add your code here
+        return this.coursesService.getCourse(id).pipe(
+            switchMap(response => {
+                if (!response || !response.successful) {
+                  throw new Error('Failed to fetch course');
+                }
+                const course = response.result;
+                return forkJoin(
+                    course.authors.map((authorId: any) => 
+                        this.getAuthorById(authorId)
+                    )
+                ).pipe(
+                  map(authorNames => ({
+                    ...course,
+                    authors: authorNames
+                  }))
+                );
+              }),
+            )
+    }
+
+    editCourse(id: string, course: any): Observable<any> { // replace 'any' with the required interface
+        // Add your code here
+//        this.isLoading$$.next(true);
+        return this.coursesService.editCourse(id, course);
     }
 
     deleteCourse(id: string) {
@@ -66,39 +144,36 @@ export class CoursesStoreService {
           ).subscribe();
     }
 
-    filterCourses(value: string[]) {
+    getAllAuthors(): Observable<string[]> {
         // Add your code here
-        this.isLoading$$.next(true);
-        this.coursesService.filterCourses(value).pipe(
-            tap((courses: any) => {
-                this.courses$$.next(courses);
-                this.isLoading$$.next(false);
+        return this.coursesService.getAllAuthors().pipe(
+            catchError(error => {
+              console.error('Error fetching authors', error);
+              return throwError(() => error);
+            }),
+            map(response => {
+              if (response.successful && response.result) {
+                return response.result.map((item: any) => item.id);
+              } else {
+                return throwError(() => new Error('Unsuccessful response'));
+              }
             })
-          ).subscribe();
-    }
-
-    getAllAuthors() {
-        // Add your code here
-        return this.coursesService.getAllAuthors();
-    }
+          );
+        }
 
     createAuthor(name: string) {
         // Add your code here
         return this.coursesService.createAuthor(name);
     }
 
-    getAuthorById(id: string) {
+    getAuthorById(id: string): Observable<string> {
         // Add your code here
-        return this.coursesService.getAuthorById(id);
+        return this.coursesService.getAuthorById(id).pipe(
+            map(response => {
+                if (response.successful && response.result) {
+                  return response.result.name;
+                }
+            }
+        ));
     }
-
-    searchCourses(value: string[]): void {
-        this.isLoading$$.next(true);
-        this.coursesService.filterCourses(value).pipe(
-          tap((courses: Course[]) => {
-            this.courses$$.next(courses);
-            this.isLoading$$.next(false);
-          })
-        ).subscribe();
-      }
 }

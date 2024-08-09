@@ -72,7 +72,7 @@
               <div formArrayName="authors">
                 <div *ngFor="let authorControl of authors.controls; let i = index" style="display: flex;">
                   <input type="text" [formControl]="getAuthorControl(i)">
-                  <app-button id="addAuthor" name="addAuthor" (click)="onAddAuthor(i)" [iconName]="addBtn"></app-button>
+                  <app-button id="addCourseAuthor" name="addCourseAuthor" (click)="onAddCourseAuthor(i)" [iconName]="addBtn"></app-button>
                   <app-button id="deleteAuthor" name="deleteAuthor" (click)="onDeleteAuthor(i)" [iconName]="removeBtn"></app-button>
                 </div>
               </div>

@@ -1,6 +1,6 @@
 <form (ngSubmit)="onSubmit()">
   <div class="app-search">
     <input type="text" [(ngModel)]="searchInput" name="searchInput" placeholder="{{ placeholder }}">
-    <app-button type="submit" [buttonText]="searchBtn"></app-button>
+    <app-button type="submit" (click)="onSubmit()" [buttonText]="searchBtn"></app-button>
   </div>
 </form>

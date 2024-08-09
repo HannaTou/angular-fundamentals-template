@@ -17,11 +17,11 @@ export class AdminGuard implements CanActivate {
       canActivate(): boolean | UrlTree {
         const isAdmin = this.userStoreService.isAdmin;
         if (isAdmin) {
-          return true;
           console.log('admin');
+          return true;
         } else {
-          return this.router.parseUrl('/courses');
           console.log('not admin');
+          return this.router.parseUrl('/courses');
         }
       }
 }

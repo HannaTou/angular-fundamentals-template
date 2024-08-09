@@ -14,7 +14,7 @@ import { CoursesService } from '@app/services/courses.service';
   imports: [
     CommonModule,
     CourseInfoModule,
-    SharedModule,
+    SharedModule
   ],
   providers: [AuthorizedGuard, NotAuthorizedGuard, CoursesService, CoursesStoreService],
   bootstrap: [AppComponent],
