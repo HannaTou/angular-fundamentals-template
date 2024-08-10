@@ -3,21 +3,24 @@ import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { AuthService } from '@app/auth/services/auth.service';
+import { SessionStorageService } from '../services/session-storage.service';
 import { Router } from '@angular/router';
 
 const TOKEN = 'SESSION_TOKEN';
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
     // Add your code here
-    constructor(private authService: AuthService, private router: Router) {}
+    constructor(
+      private authService: AuthService,
+      private sessionStorageService: SessionStorageService,
+       private router: Router
+      ) {}
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-      const token = window.sessionStorage.getItem(TOKEN);
+      const token = this.sessionStorageService.getToken();
       if (token) {
         request = request.clone({
-          setHeaders: {
-            Authorization: `Bearer ${token}`
-          }
+          headers: request.headers.set('Authorization', `${token}`)
         });
       }
   

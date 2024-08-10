@@ -40,11 +40,11 @@ export class CoursesStateFacade {
       this.store.dispatch(CourseActions.requestFilteredCourses({ title }));
     }
   
-    editCourse(body: Course, id: string): void {
-      this.store.dispatch(CourseActions.requestEditCourse({ course: body, id }));
+    editCourse(id: string, body: any): void {
+      this.store.dispatch(CourseActions.requestEditCourse({ id, course: body }));
     }
   
-    createCourse(body: Course): void {
+    createCourse(body: any): void {
       this.store.dispatch(CourseActions.requestCreateCourse({ course: body }));
     }
   

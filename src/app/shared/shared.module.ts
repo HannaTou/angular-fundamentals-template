@@ -18,6 +18,8 @@ import { CustomDatePipe } from './pipes/custom-date.pipe';
 import { EmailValidatorDirective } from '@shared/directives/email.directive';
 import { TogglePasswordDirective } from '@shared/directives/toggle-password.directive';
 import { RouterModule } from '@angular/router';
+import { TokenInterceptor } from '@app/auth/interceptors/token.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 const components = [
   HeaderComponent,
@@ -44,7 +46,14 @@ const components = [
     ReactiveFormsModule,
     RouterModule,
   ],
-  exports: [components]
+  exports: [components],
+  providers: [
+    {
+        provide: HTTP_INTERCEPTORS,
+        useClass: TokenInterceptor,
+        multi: true
+      },
+]
 })
 
 export class SharedModule { }

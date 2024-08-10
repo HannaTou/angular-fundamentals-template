@@ -14,6 +14,7 @@ export class CoursesEffects {
     constructor(
         private actions$: Actions,
         private coursesService: CoursesService,
+        private coursesStoreService: CoursesStoreService,
         private coursesStateFacade: CoursesStateFacade,
         private router: Router
     ) {}
@@ -21,7 +22,7 @@ export class CoursesEffects {
     // Add your code here
     getAll$ = createEffect(() => this.actions$.pipe(
         ofType(CourseActions.requestAllCourses),
-        mergeMap(() => this.coursesService.getAll()
+        mergeMap(() => this.coursesStoreService.getAll()
           .pipe(
             map(courses => CourseActions.requestAllCoursesSuccess({ courses })),
             catchError(error => of(CourseActions.requestAllCoursesFail({ error })))
@@ -38,7 +39,7 @@ export class CoursesEffects {
     
       getSpecificCourse$ = createEffect(() => this.actions$.pipe(
         ofType(CourseActions.requestSingleCourse),
-        mergeMap(action => this.coursesService.getCourse(action.id)
+        mergeMap(action => this.coursesStoreService.getCourse(action.id)
           .pipe(
             map(course => CourseActions.requestSingleCourseSuccess({ course })),
             catchError(error => of(CourseActions.requestSingleCourseFail({ error })))
@@ -58,7 +59,7 @@ export class CoursesEffects {
     
       editCourse$ = createEffect(() => this.actions$.pipe(
         ofType(CourseActions.requestEditCourse),
-        mergeMap(action => this.coursesService.editCourse(action.id, action.course)
+        mergeMap(action => this.coursesStoreService.editCourse(action.id, action.course)
           .pipe(
             map((course: any) => CourseActions.requestEditCourseSuccess({ course })),
             catchError(error => of(CourseActions.requestEditCourseFail({ error })))

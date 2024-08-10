@@ -63,12 +63,12 @@ export const requestAllCourses = createAction(
   
   export const requestEditCourse = createAction(
     CoursesConstants.REQUEST_EDIT_COURSE,
-    props<{ id: string; course: Course }>()
+    props<{ id: string; course: any }>()
   );
   
   export const requestEditCourseSuccess = createAction(
     CoursesConstants.REQUEST_EDIT_COURSE_SUCCESS,
-    props<{ course: Course }>()
+    props<{ course: any }>()
   );
   
   export const requestEditCourseFail = createAction(

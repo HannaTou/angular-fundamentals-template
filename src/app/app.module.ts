@@ -11,10 +11,11 @@ import { AuthorizedGuard } from '@app/auth/guards/authorized.guard';
 import { CoursesStoreService } from '@app/services/courses-store.service';
 import { CoursesService } from '@app/services/courses.service';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './auth/interceptors/token.interceptor';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import {reducers, effects} from './store/index';
+import { reducers, effects } from './store/index';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +32,11 @@ import {reducers, effects} from './store/index';
     EffectsModule.forRoot(effects),
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    },
     AuthorizedGuard,
     NotAuthorizedGuard,
     CoursesService,

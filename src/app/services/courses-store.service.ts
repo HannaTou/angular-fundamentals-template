@@ -17,7 +17,9 @@ export class CoursesStoreService {
 
     authors: string[] = [];
 
-    constructor(private coursesService: CoursesService) {}
+    constructor(
+        private coursesService: CoursesService
+    ) {}
     
     getAll(): Observable<any> {
         // Add your code here
@@ -163,7 +165,7 @@ export class CoursesStoreService {
 
     createAuthor(name: string) {
         // Add your code here
-        return this.coursesService.createAuthor(name);
+        return this.coursesService.createAuthor(name).subscribe();
     }
 
     getAuthorById(id: string): Observable<string> {

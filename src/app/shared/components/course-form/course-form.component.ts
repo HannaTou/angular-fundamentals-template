@@ -172,12 +172,15 @@ export class CourseFormComponent {
   addBtn : IconProp = ['fas', 'plus'];
 
   onSubmitCourse(): void{
+    console.log(this.courseId);
+    console.log(this.isEditMode);
     if (this.courseForm.invalid){
       this.courseForm.controls['title'].markAsTouched({onlySelf: true});
       this.courseForm.controls['description'].markAsTouched({onlySelf: true});
       this.courseForm.controls['duration'].markAsTouched({onlySelf: true});
-    } else if (this.isEditMode && this.courseId) {
-      this.coursesStore.editCourse(this.courseId, {
+    } else if (this.isEditMode) {
+      const id = this.route.snapshot.params['id'];
+      this.coursesStore.editCourse(id, {
            title: this.courseForm.controls['title'].value,
            description: this.courseForm.controls['description'].value,
            duration: this.courseForm.controls['duration'].value,
@@ -185,13 +188,12 @@ export class CourseFormComponent {
           }).subscribe(() => {
       });
     } else {
-      this.coursesService.createCourse({
+      this.coursesStore.createCourse({
            title: this.courseForm.controls['title'].value,
            description: this.courseForm.controls['description'].value,
            duration: this.courseForm.controls['duration'].value,
            authors: this.courseForm.controls['courseAuthorIds'].value
-         }).subscribe(() => {
-      });
+         });
     }
     this.router.navigate(['/courses']);
   }
