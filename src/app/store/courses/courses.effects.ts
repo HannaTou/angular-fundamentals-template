@@ -72,21 +72,15 @@ export class CoursesEffects {
       )
     ));
     
-    createCourse$ = createEffect(() => this.actions$.pipe(
+    createCourse$ = createEffect((): Observable<any> => this.actions$.pipe(
       ofType(CoursesActions.requestCreateCourse),
       mergeMap((action: ReturnType<typeof CoursesActions.requestCreateCourse>) =>
         this.coursesStoreService.createCourse(action.course).pipe(
-          map((course: any): Action => {
-            return CoursesActions.requestCreateCourseSuccess({ course }) as Action;
-          }),
-          catchError((error: any): Observable<Action> => {
-            return of(CoursesActions.requestCreateCourseFail({ error }) as Action);
-          })
+          map(course => CoursesActions.requestCreateCourseSuccess({ course }) as Action),
+          catchError(error => of(CoursesActions.requestCreateCourseFail({ error })) as Observable<Action>)
         )
       ),
-      catchError((error: any): Observable<Action> => {
-        return of(CoursesActions.requestCreateCourseFail({ error }) as Action);
-      })
+      catchError(error => of(CoursesActions.requestCreateCourseFail({ error })) as Observable<Action>)
     ));
     
     redirectToTheCoursesPage$ = createEffect(() => this.actions$.pipe(
