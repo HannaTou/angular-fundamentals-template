@@ -20,6 +20,10 @@ import { TogglePasswordDirective } from '@shared/directives/toggle-password.dire
 import { RouterModule } from '@angular/router';
 import { TokenInterceptor } from '@app/auth/interceptors/token.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { CoursesEffects } from '../store/courses/courses.effects';
+import { coursesFeatureKey, coursesReducer } from '../store/courses/courses.reducer';
 
 const components = [
   HeaderComponent,
@@ -45,6 +49,8 @@ const components = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+    StoreModule.forFeature(coursesFeatureKey, coursesReducer),
+    EffectsModule.forFeature([CoursesEffects])
   ],
   exports: [components],
   providers: [

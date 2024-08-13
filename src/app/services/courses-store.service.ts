@@ -89,9 +89,9 @@ export class CoursesStoreService {
               return of([]);
           }),
           finalize(() => this.isLoading$$.next(false))
-      ).subscribe();}
+      ).subscribe()}
 
-    createCourse(course: any) { // replace 'any' with the required interface
+    createCourse(course: any): any { // replace 'any' with the required interface
         // Add your code here
         this.isLoading$$.next(true);
         this.coursesService.createCourse(course).pipe(
@@ -131,19 +131,18 @@ export class CoursesStoreService {
 
     editCourse(id: string, course: any): Observable<any> { // replace 'any' with the required interface
         // Add your code here
-//        this.isLoading$$.next(true);
         return this.coursesService.editCourse(id, course);
     }
 
-    deleteCourse(id: string) {
+    deleteCourse(id: string): Observable<any> {
         // Add your code here
         this.isLoading$$.next(true);
-        this.coursesService.deleteCourse(id).pipe(
+        return this.coursesService.deleteCourse(id).pipe(
             tap(() => {
                 this.getAll();
                 this.isLoading$$.next(false);
             })
-          ).subscribe();
+          );
     }
 
     getAllAuthors(): Observable<string[]> {

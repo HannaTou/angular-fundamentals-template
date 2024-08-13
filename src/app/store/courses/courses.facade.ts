@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { filter, Observable } from 'rxjs';
 import * as CourseActions from './courses.actions';
 import {
   isAllCoursesLoadingSelector,
   isSingleCourseLoadingSelector,
   isSearchingStateSelector,
   getAllCourses,
+  getFilteredCourses,
   getCourse,
   getErrorMessage
 } from './courses.selectors';
@@ -21,8 +22,9 @@ export class CoursesStateFacade {
     isAllCoursesLoading$: Observable<boolean> = this.store.pipe(select(isAllCoursesLoadingSelector));
     isSingleCourseLoading$: Observable<boolean> = this.store.pipe(select(isSingleCourseLoadingSelector));
     isSearchingState$: Observable<boolean> = this.store.pipe(select(isSearchingStateSelector));
-    courses$: Observable<Course[]> = this.store.pipe(select(getAllCourses));
-    course$: Observable<Course | null> = this.store.pipe(select(getCourse));
+    allCourses$: Observable<any[] | null> = this.store.pipe(select(getAllCourses));
+    courses$: Observable<any[] | null> = this.store.pipe(select(getFilteredCourses));
+    course$: Observable<any | null> = this.store.pipe(select(getCourse));
     errorMessage$: Observable<string | null> = this.store.pipe(select(getErrorMessage));
   
     constructor(private store: Store) {}
@@ -40,8 +42,8 @@ export class CoursesStateFacade {
       this.store.dispatch(CourseActions.requestFilteredCourses({ title }));
     }
   
-    editCourse(id: string, body: any): void {
-      this.store.dispatch(CourseActions.requestEditCourse({ id, course: body }));
+    editCourse(body: any, id: string): void {
+      this.store.dispatch(CourseActions.requestEditCourse({ course: body, id }));
     }
   
     createCourse(body: any): void {

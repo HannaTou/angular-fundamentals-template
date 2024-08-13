@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="55" failures="0" errors="0" time="5.471">
+  <testsuite name="CoursesStateFacade" errors="0" failures="0" skipped="0" timestamp="2024-08-13T11:22:00" time="3.139" tests="13">
+    <testcase classname="CoursesStateFacade selectors should select isAllCoursesLoading" name="CoursesStateFacade selectors should select isAllCoursesLoading" time="0.029">
+    </testcase>
+    <testcase classname="CoursesStateFacade selectors should select isSingleCourseLoading" name="CoursesStateFacade selectors should select isSingleCourseLoading" time="0.003">
+    </testcase>
+    <testcase classname="CoursesStateFacade selectors should select isSearchingState" name="CoursesStateFacade selectors should select isSearchingState" time="0.002">
+    </testcase>
+    <testcase classname="CoursesStateFacade selectors should select courses" name="CoursesStateFacade selectors should select courses" time="0.003">
+    </testcase>
+    <testcase classname="CoursesStateFacade selectors should select allCourses" name="CoursesStateFacade selectors should select allCourses" time="0.003">
+    </testcase>
+    <testcase classname="CoursesStateFacade selectors should select course" name="CoursesStateFacade selectors should select course" time="0.002">
+    </testcase>
+    <testcase classname="CoursesStateFacade selectors should select errorMessage" name="CoursesStateFacade selectors should select errorMessage" time="0.002">
+    </testcase>
+    <testcase classname="CoursesStateFacade methods should dispatch requestAllCourses action when calling getAllCourses" name="CoursesStateFacade methods should dispatch requestAllCourses action when calling getAllCourses" time="0.003">
+    </testcase>
+    <testcase classname="CoursesStateFacade methods should dispatch requestSingleCourse action with the provided id when calling getSingleCourse" name="CoursesStateFacade methods should dispatch requestSingleCourse action with the provided id when calling getSingleCourse" time="0.003">
+    </testcase>
+    <testcase classname="CoursesStateFacade methods should dispatch requestFilteredCourses action with the provided searchValue when calling getFilteredCourses" name="CoursesStateFacade methods should dispatch requestFilteredCourses action with the provided searchValue when calling getFilteredCourses" time="0.003">
+    </testcase>
+    <testcase classname="CoursesStateFacade methods should dispatch requestEditCourse action with the provided body and id when calling editCourse" name="CoursesStateFacade methods should dispatch requestEditCourse action with the provided body and id when calling editCourse" time="0.002">
+    </testcase>
+    <testcase classname="CoursesStateFacade methods should dispatch requestCreateCourse action with the provided body when calling createCourse" name="CoursesStateFacade methods should dispatch requestCreateCourse action with the provided body when calling createCourse" time="0.002">
+    </testcase>
+    <testcase classname="CoursesStateFacade methods should dispatch requestDeleteCourse action with the provided id when calling deleteCourse" name="CoursesStateFacade methods should dispatch requestDeleteCourse action with the provided id when calling deleteCourse" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Course Actions" errors="0" failures="0" skipped="0" timestamp="2024-08-13T11:22:03" time="0.3" tests="17">
+    <testcase classname="Course Actions should create requestAllCourses action" name="Course Actions should create requestAllCourses action" time="0.023">
+    </testcase>
+    <testcase classname="Course Actions should create requestAllCoursesSuccess action" name="Course Actions should create requestAllCoursesSuccess action" time="0.003">
+    </testcase>
+    <testcase classname="Course Actions should create requestAllCoursesFail action" name="Course Actions should create requestAllCoursesFail action" time="0.002">
+    </testcase>
+    <testcase classname="Course Actions should create requestSingleCourse action" name="Course Actions should create requestSingleCourse action" time="0.001">
+    </testcase>
+    <testcase classname="Course Actions should create requestSingleCourseSuccess action" name="Course Actions should create requestSingleCourseSuccess action" time="0.002">
+    </testcase>
+    <testcase classname="Course Actions should create requestSingleCourseFail action" name="Course Actions should create requestSingleCourseFail action" time="0.002">
+    </testcase>
+    <testcase classname="Course Actions should create requestFilteredCourses action" name="Course Actions should create requestFilteredCourses action" time="0.002">
+    </testcase>
+    <testcase classname="Course Actions should create requestFilteredCoursesSuccess action" name="Course Actions should create requestFilteredCoursesSuccess action" time="0.004">
+    </testcase>
+    <testcase classname="Course Actions should create requestDeleteCourse action" name="Course Actions should create requestDeleteCourse action" time="0.004">
+    </testcase>
+    <testcase classname="Course Actions should create requestDeleteCourseSuccess action" name="Course Actions should create requestDeleteCourseSuccess action" time="0.003">
+    </testcase>
+    <testcase classname="Course Actions should create requestDeleteCourseFail action" name="Course Actions should create requestDeleteCourseFail action" time="0.003">
+    </testcase>
+    <testcase classname="Course Actions should create requestEditCourse action" name="Course Actions should create requestEditCourse action" time="0.003">
+    </testcase>
+    <testcase classname="Course Actions should create requestEditCourseSuccess action" name="Course Actions should create requestEditCourseSuccess action" time="0.003">
+    </testcase>
+    <testcase classname="Course Actions should create requestEditCourseFail action" name="Course Actions should create requestEditCourseFail action" time="0.002">
+    </testcase>
+    <testcase classname="Course Actions should create requestCreateCourse action" name="Course Actions should create requestCreateCourse action" time="0.002">
+    </testcase>
+    <testcase classname="Course Actions should create requestCreateCourseSuccess action" name="Course Actions should create requestCreateCourseSuccess action" time="0.003">
+    </testcase>
+    <testcase classname="Course Actions should create requestCreateCourseFail action" name="Course Actions should create requestCreateCourseFail action" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Courses Reducer" errors="0" failures="0" skipped="0" timestamp="2024-08-13T11:22:03" time="0.225" tests="18">
+    <testcase classname="Courses Reducer should set isAllCoursesLoading to true on requestAllCourses" name="Courses Reducer should set isAllCoursesLoading to true on requestAllCourses" time="0.001">
+    </testcase>
+    <testcase classname="Courses Reducer should set allCourses and isAllCoursesLoading to false on requestAllCoursesSuccess" name="Courses Reducer should set allCourses and isAllCoursesLoading to false on requestAllCoursesSuccess" time="0.001">
+    </testcase>
+    <testcase classname="Courses Reducer should set isAllCoursesLoading and errorMessage on requestAllCoursesFail" name="Courses Reducer should set isAllCoursesLoading and errorMessage on requestAllCoursesFail" time="0.001">
+    </testcase>
+    <testcase classname="Courses Reducer should set isSingleCourseLoading to true on requestSingleCourse" name="Courses Reducer should set isSingleCourseLoading to true on requestSingleCourse" time="0.001">
+    </testcase>
+    <testcase classname="Courses Reducer should set course and isSingleCourseLoading to false on requestSingleCourseSuccess" name="Courses Reducer should set course and isSingleCourseLoading to false on requestSingleCourseSuccess" time="0">
+    </testcase>
+    <testcase classname="Courses Reducer should set isSingleCourseLoading and errorMessage on requestSingleCourseFail" name="Courses Reducer should set isSingleCourseLoading and errorMessage on requestSingleCourseFail" time="0.001">
+    </testcase>
+    <testcase classname="Courses Reducer should set isAllCoursesLoading to true on requestFilteredCourses" name="Courses Reducer should set isAllCoursesLoading to true on requestFilteredCourses" time="0">
+    </testcase>
+    <testcase classname="Courses Reducer should set allCourses and isAllCoursesLoading to false on requestFilteredCoursesSuccess" name="Courses Reducer should set allCourses and isAllCoursesLoading to false on requestFilteredCoursesSuccess" time="0.001">
+    </testcase>
+    <testcase classname="Courses Reducer should set isAllCoursesLoading and errorMessage on requestFilteredCoursesFail" name="Courses Reducer should set isAllCoursesLoading and errorMessage on requestFilteredCoursesFail" time="0">
+    </testcase>
+    <testcase classname="Courses Reducer should clear errorMessage on requestDeleteCourse" name="Courses Reducer should clear errorMessage on requestDeleteCourse" time="0">
+    </testcase>
+    <testcase classname="Courses Reducer should not modify the state on requestDeleteCourseSuccess" name="Courses Reducer should not modify the state on requestDeleteCourseSuccess" time="0">
+    </testcase>
+    <testcase classname="Courses Reducer should set errorMessage on requestDeleteCourseFail" name="Courses Reducer should set errorMessage on requestDeleteCourseFail" time="0">
+    </testcase>
+    <testcase classname="Courses Reducer should clear errorMessage on requestEditCourse" name="Courses Reducer should clear errorMessage on requestEditCourse" time="0">
+    </testcase>
+    <testcase classname="Courses Reducer should update course on requestEditCourseSuccess" name="Courses Reducer should update course on requestEditCourseSuccess" time="0">
+    </testcase>
+    <testcase classname="Courses Reducer should set errorMessage on requestEditCourseFail" name="Courses Reducer should set errorMessage on requestEditCourseFail" time="0.001">
+    </testcase>
+    <testcase classname="Courses Reducer should clear errorMessage on requestCreateCourse" name="Courses Reducer should clear errorMessage on requestCreateCourse" time="0">
+    </testcase>
+    <testcase classname="Courses Reducer should set errorMessage on requestCreateCourseFail" name="Courses Reducer should set errorMessage on requestCreateCourseFail" time="0">
+    </testcase>
+    <testcase classname="Courses Reducer should return the current state by default" name="Courses Reducer should return the current state by default" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Courses Selectors" errors="0" failures="0" skipped="0" timestamp="2024-08-13T11:22:04" time="0.185" tests="7">
+    <testcase classname="Courses Selectors should select the courses feature state" name="Courses Selectors should select the courses feature state" time="0.002">
+    </testcase>
+    <testcase classname="Courses Selectors should select the isAllCoursesLoading state" name="Courses Selectors should select the isAllCoursesLoading state" time="0.001">
+    </testcase>
+    <testcase classname="Courses Selectors should select the isSearchingState state" name="Courses Selectors should select the isSearchingState state" time="0.001">
+    </testcase>
+    <testcase classname="Courses Selectors should select the isSingleCourseLoading state" name="Courses Selectors should select the isSingleCourseLoading state" time="0">
+    </testcase>
+    <testcase classname="Courses Selectors should select the allCourses state" name="Courses Selectors should select the allCourses state" time="0">
+    </testcase>
+    <testcase classname="Courses Selectors should select the course state" name="Courses Selectors should select the course state" time="0">
+    </testcase>
+    <testcase classname="Courses Selectors should select the error message state" name="Courses Selectors should select the error message state" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>

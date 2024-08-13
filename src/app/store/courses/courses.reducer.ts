@@ -7,8 +7,9 @@ import { CoursesConstants } from './courses.constants';
 
 export interface CoursesState {
     // Add your code here
-    allCourses: Course[];
-    course: Course | null;
+    allCourses: any[] | null;
+//    courses: any[] | null;
+    course: any | null;
     isAllCoursesLoading: boolean;
     isSingleCourseLoading: boolean;
     isSearchState: boolean;
@@ -17,7 +18,8 @@ export interface CoursesState {
 
 export const initialState: CoursesState = {
     // Add your code here
-    allCourses: [],
+    allCourses: [] as any[],
+//    courses: [] as any[],
     course: null,
     isAllCoursesLoading: false,
     isSingleCourseLoading: false,
@@ -82,11 +84,11 @@ export const coursesReducer = createReducer(
     // Handle delete course
     on(CoursesActions.requestDeleteCourse, state => ({
       ...state,
-      errorMessage: null
+      allCourses: state.allCourses ? state.allCourses.filter((course: any) => course.id) : [],
+      errorMessage: ""
     })),
     on(CoursesActions.requestDeleteCourseSuccess, state => ({
-      ...state,
-      allCourses: state.allCourses.filter(course => course.id)
+      ...state
     })),
     on(CoursesActions.requestDeleteCourseFail, (state, { error }) => ({
       ...state,
@@ -96,11 +98,11 @@ export const coursesReducer = createReducer(
     // Handle edit course
     on(CoursesActions.requestEditCourse, state => ({
       ...state,
-      errorMessage: null
+      errorMessage: ""
     })),
     on(CoursesActions.requestEditCourseSuccess, (state, { course }) => ({
       ...state,
-      allCourses: state.allCourses.map(c => c.id === course.id ? course : c),
+      allCourses: state.allCourses? state.allCourses.map((c: any) => c.id === course.id ? course : c) : [],
       course: course
     })),
     on(CoursesActions.requestEditCourseFail, (state, { error }) => ({
@@ -111,11 +113,11 @@ export const coursesReducer = createReducer(
     // Handle create course
     on(CoursesActions.requestCreateCourse, state => ({
       ...state,
-      errorMessage: null
+      errorMessage: ""
     })),
     on(CoursesActions.requestCreateCourseSuccess, (state, { course }) => ({
       ...state,
-      allCourses: [...state.allCourses, course]
+      allCourses: [...state.allCourses!, course]
     })),
     on(CoursesActions.requestCreateCourseFail, (state, { error }) => ({
       ...state,

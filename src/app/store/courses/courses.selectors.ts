@@ -28,6 +28,12 @@ export const isAllCoursesLoadingSelector = createSelector(
     selectCoursesState,
     (state: CoursesState) => state.allCourses
   );
+
+  // Selector to get filtered courses
+  export const getFilteredCourses = createSelector(
+    selectCoursesState,
+    (state: CoursesState) => state.allCourses
+  );
   
   // Selector to get the current course
   export const getCourse = createSelector(

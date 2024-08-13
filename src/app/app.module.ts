@@ -16,6 +16,8 @@ import { TokenInterceptor } from './auth/interceptors/token.interceptor';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { reducers, effects } from './store/index';
+import { CoursesEffects } from './store/courses/courses.effects';
+import { coursesReducer } from './store/courses/courses.reducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,8 +30,8 @@ import { reducers, effects } from './store/index';
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    StoreModule.forRoot(reducers),
-    EffectsModule.forRoot(effects),
+    StoreModule.forRoot({ courses: coursesReducer }), // Ensure reducers are properly set
+    EffectsModule.forRoot([CoursesEffects]),
   ],
   providers: [
     {
