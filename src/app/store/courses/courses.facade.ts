@@ -1,56 +1,49 @@
 import { Injectable } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { filter, Observable } from 'rxjs';
-import * as CourseActions from './courses.actions';
-import {
-  isAllCoursesLoadingSelector,
-  isSingleCourseLoadingSelector,
-  isSearchingStateSelector,
-  getAllCourses,
-  getFilteredCourses,
-  getCourse,
-  getErrorMessage
-} from './courses.selectors';
-import { Course } from '@app/features/courses/courses.module';
+import { reducer, CoursesState, coursesReducer } from './courses.reducer';
+import * as CoursesActions from './courses.actions';
+import * as CoursesSelectors from './courses.selectors';
+import { Observable } from 'rxjs';
+import { InitialState } from '@ngrx/store/src/models';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 
 export class CoursesStateFacade {
-    // Add your code here
-    isAllCoursesLoading$: Observable<boolean> = this.store.pipe(select(isAllCoursesLoadingSelector));
-    isSingleCourseLoading$: Observable<boolean> = this.store.pipe(select(isSingleCourseLoadingSelector));
-    isSearchingState$: Observable<boolean> = this.store.pipe(select(isSearchingStateSelector));
-    allCourses$: Observable<any[] | null> = this.store.pipe(select(getAllCourses));
-    courses$: Observable<any[] | null> = this.store.pipe(select(getFilteredCourses));
-    course$: Observable<any | null> = this.store.pipe(select(getCourse));
-    errorMessage$: Observable<string | null> = this.store.pipe(select(getErrorMessage));
-  
-    constructor(private store: Store) {}
-  
-    // Methods to dispatch actions
-    getAllCourses(): void {
-      this.store.dispatch(CourseActions.requestAllCourses());
-    }
-  
-    getSingleCourse(id: string): void {
-      this.store.dispatch(CourseActions.requestSingleCourse({ id }));
-    }
-  
-    getFilteredCourses(title: string): void {
-      this.store.dispatch(CourseActions.requestFilteredCourses({ title }));
-    }
-  
-    editCourse(body: any, id: string): void {
-      this.store.dispatch(CourseActions.requestEditCourse({ course: body, id }));
-    }
-  
-    createCourse(body: any): void {
-      this.store.dispatch(CourseActions.requestCreateCourse({ course: body }));
-    }
-  
-    deleteCourse(id: string): void {
-      this.store.dispatch(CourseActions.requestDeleteCourse({ id }));
-    }
+  // Observable properties
+  isAllCoursesLoading$: Observable<boolean> = this.prStore.pipe(select(CoursesSelectors.isAllCoursesLoadingSelector));
+  isSingleCourseLoading$: Observable<boolean> = this.prStore.pipe(select(CoursesSelectors.isSingleCourseLoadingSelector));
+  isSearchingState$: Observable<boolean> = this.prStore.pipe(select(CoursesSelectors.isSearchingStateSelector));
+  courses$: Observable<any[] | null | undefined> = this.prStore.pipe(select(CoursesSelectors.getAllCourses));
+  allCourses$: Observable<any[] | null | undefined> = this.prStore.pipe(select(CoursesSelectors.getAllCourses));
+  course$: Observable<any | undefined> = this.prStore.pipe(select(CoursesSelectors.getCourse));
+  errorMessage$: Observable<string | null> = this.prStore.pipe(select(CoursesSelectors.getErrorMessage));
+
+  constructor(private prStore: Store<CoursesState>) {}
+
+  // Methods to dispatch actions
+  getAllCourses() {
+    this.prStore.dispatch(CoursesActions.requestAllCourses());
+  }
+
+  getSingleCourse(id: string) {
+    this.prStore.dispatch(CoursesActions.requestSingleCourse({ id }));
+  }
+
+  getFilteredCourses(searchValue: string) {
+    this.prStore.dispatch(CoursesActions.requestFilteredCourses({ title: searchValue }));
+  }
+
+  editCourse(course: any, id: string) {
+    this.prStore.dispatch(CoursesActions.requestEditCourse({ course, id }));
+  }
+
+  createCourse(course: any) {
+    this.prStore.dispatch(CoursesActions.requestCreateCourse({ course }));
+  }
+
+  deleteCourse(id: string) {
+    this.prStore.dispatch(CoursesActions.requestDeleteCourse({ id }));
+  }
 }

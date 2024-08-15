@@ -5,6 +5,7 @@ import { CoursesEffects } from '@app/store/courses/courses.effects';
 import * as CoursesActions from '@app/store/courses/courses.actions';
 import { CoursesService } from '@app/services/courses.service';
 import { Router } from '@angular/router';
+//import { StoreService } from '@app/services/store.service';
 
 const MOCK_COURSES = [{
     title: 'New Course',

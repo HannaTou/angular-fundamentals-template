@@ -1,87 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="70" failures="15" errors="0" time="6.803">
-  <testsuite name="Course Actions" errors="0" failures="0" skipped="0" timestamp="2024-08-13T12:14:48" time="1.212" tests="17">
-    <testcase classname="Course Actions should create requestAllCourses action" name="Course Actions should create requestAllCourses action" time="0.035">
-    </testcase>
-    <testcase classname="Course Actions should create requestAllCoursesSuccess action" name="Course Actions should create requestAllCoursesSuccess action" time="0.007">
-    </testcase>
-    <testcase classname="Course Actions should create requestAllCoursesFail action" name="Course Actions should create requestAllCoursesFail action" time="0.004">
-    </testcase>
-    <testcase classname="Course Actions should create requestSingleCourse action" name="Course Actions should create requestSingleCourse action" time="0.003">
-    </testcase>
-    <testcase classname="Course Actions should create requestSingleCourseSuccess action" name="Course Actions should create requestSingleCourseSuccess action" time="0.004">
-    </testcase>
-    <testcase classname="Course Actions should create requestSingleCourseFail action" name="Course Actions should create requestSingleCourseFail action" time="0.003">
-    </testcase>
-    <testcase classname="Course Actions should create requestFilteredCourses action" name="Course Actions should create requestFilteredCourses action" time="0.003">
-    </testcase>
-    <testcase classname="Course Actions should create requestFilteredCoursesSuccess action" name="Course Actions should create requestFilteredCoursesSuccess action" time="0.004">
-    </testcase>
-    <testcase classname="Course Actions should create requestDeleteCourse action" name="Course Actions should create requestDeleteCourse action" time="0.004">
-    </testcase>
-    <testcase classname="Course Actions should create requestDeleteCourseSuccess action" name="Course Actions should create requestDeleteCourseSuccess action" time="0.004">
-    </testcase>
-    <testcase classname="Course Actions should create requestDeleteCourseFail action" name="Course Actions should create requestDeleteCourseFail action" time="0.002">
-    </testcase>
-    <testcase classname="Course Actions should create requestEditCourse action" name="Course Actions should create requestEditCourse action" time="0.001">
-    </testcase>
-    <testcase classname="Course Actions should create requestEditCourseSuccess action" name="Course Actions should create requestEditCourseSuccess action" time="0.002">
-    </testcase>
-    <testcase classname="Course Actions should create requestEditCourseFail action" name="Course Actions should create requestEditCourseFail action" time="0.004">
-    </testcase>
-    <testcase classname="Course Actions should create requestCreateCourse action" name="Course Actions should create requestCreateCourse action" time="0.002">
-    </testcase>
-    <testcase classname="Course Actions should create requestCreateCourseSuccess action" name="Course Actions should create requestCreateCourseSuccess action" time="0.002">
-    </testcase>
-    <testcase classname="Course Actions should create requestCreateCourseFail action" name="Course Actions should create requestCreateCourseFail action" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="CoursesStateFacade" errors="0" failures="0" skipped="0" timestamp="2024-08-13T12:14:48" time="1.235" tests="13">
-    <testcase classname="CoursesStateFacade selectors should select isAllCoursesLoading" name="CoursesStateFacade selectors should select isAllCoursesLoading" time="0.038">
-    </testcase>
-    <testcase classname="CoursesStateFacade selectors should select isSingleCourseLoading" name="CoursesStateFacade selectors should select isSingleCourseLoading" time="0.003">
-    </testcase>
-    <testcase classname="CoursesStateFacade selectors should select isSearchingState" name="CoursesStateFacade selectors should select isSearchingState" time="0.004">
-    </testcase>
-    <testcase classname="CoursesStateFacade selectors should select courses" name="CoursesStateFacade selectors should select courses" time="0.004">
-    </testcase>
-    <testcase classname="CoursesStateFacade selectors should select allCourses" name="CoursesStateFacade selectors should select allCourses" time="0.003">
-    </testcase>
-    <testcase classname="CoursesStateFacade selectors should select course" name="CoursesStateFacade selectors should select course" time="0.003">
-    </testcase>
-    <testcase classname="CoursesStateFacade selectors should select errorMessage" name="CoursesStateFacade selectors should select errorMessage" time="0.002">
-    </testcase>
-    <testcase classname="CoursesStateFacade methods should dispatch requestAllCourses action when calling getAllCourses" name="CoursesStateFacade methods should dispatch requestAllCourses action when calling getAllCourses" time="0.004">
-    </testcase>
-    <testcase classname="CoursesStateFacade methods should dispatch requestSingleCourse action with the provided id when calling getSingleCourse" name="CoursesStateFacade methods should dispatch requestSingleCourse action with the provided id when calling getSingleCourse" time="0.003">
-    </testcase>
-    <testcase classname="CoursesStateFacade methods should dispatch requestFilteredCourses action with the provided searchValue when calling getFilteredCourses" name="CoursesStateFacade methods should dispatch requestFilteredCourses action with the provided searchValue when calling getFilteredCourses" time="0.002">
-    </testcase>
-    <testcase classname="CoursesStateFacade methods should dispatch requestEditCourse action with the provided body and id when calling editCourse" name="CoursesStateFacade methods should dispatch requestEditCourse action with the provided body and id when calling editCourse" time="0.003">
-    </testcase>
-    <testcase classname="CoursesStateFacade methods should dispatch requestCreateCourse action with the provided body when calling createCourse" name="CoursesStateFacade methods should dispatch requestCreateCourse action with the provided body when calling createCourse" time="0.002">
-    </testcase>
-    <testcase classname="CoursesStateFacade methods should dispatch requestDeleteCourse action with the provided id when calling deleteCourse" name="CoursesStateFacade methods should dispatch requestDeleteCourse action with the provided id when calling deleteCourse" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="Courses Selectors" errors="0" failures="0" skipped="0" timestamp="2024-08-13T12:14:50" time="0.316" tests="7">
-    <testcase classname="Courses Selectors should select the courses feature state" name="Courses Selectors should select the courses feature state" time="0.001">
+<testsuites name="jest tests" tests="70" failures="0" errors="0" time="5.578">
+  <testsuite name="Courses Selectors" errors="0" failures="0" skipped="0" timestamp="2024-08-15T18:52:26" time="1.029" tests="7">
+    <testcase classname="Courses Selectors should select the courses feature state" name="Courses Selectors should select the courses feature state" time="0.01">
     </testcase>
     <testcase classname="Courses Selectors should select the isAllCoursesLoading state" name="Courses Selectors should select the isAllCoursesLoading state" time="0.001">
     </testcase>
-    <testcase classname="Courses Selectors should select the isSearchingState state" name="Courses Selectors should select the isSearchingState state" time="0">
+    <testcase classname="Courses Selectors should select the isSearchingState state" name="Courses Selectors should select the isSearchingState state" time="0.001">
     </testcase>
     <testcase classname="Courses Selectors should select the isSingleCourseLoading state" name="Courses Selectors should select the isSingleCourseLoading state" time="0.001">
     </testcase>
-    <testcase classname="Courses Selectors should select the allCourses state" name="Courses Selectors should select the allCourses state" time="0">
+    <testcase classname="Courses Selectors should select the allCourses state" name="Courses Selectors should select the allCourses state" time="0.001">
     </testcase>
-    <testcase classname="Courses Selectors should select the course state" name="Courses Selectors should select the course state" time="0">
+    <testcase classname="Courses Selectors should select the course state" name="Courses Selectors should select the course state" time="0.001">
     </testcase>
     <testcase classname="Courses Selectors should select the error message state" name="Courses Selectors should select the error message state" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="Courses Reducer" errors="0" failures="0" skipped="0" timestamp="2024-08-13T12:14:50" time="0.338" tests="18">
-    <testcase classname="Courses Reducer should set isAllCoursesLoading to true on requestAllCourses" name="Courses Reducer should set isAllCoursesLoading to true on requestAllCourses" time="0.002">
+  <testsuite name="CoursesStateFacade" errors="0" failures="0" skipped="0" timestamp="2024-08-15T18:52:26" time="1.109" tests="13">
+    <testcase classname="CoursesStateFacade selectors should select isAllCoursesLoading" name="CoursesStateFacade selectors should select isAllCoursesLoading" time="0.033">
+    </testcase>
+    <testcase classname="CoursesStateFacade selectors should select isSingleCourseLoading" name="CoursesStateFacade selectors should select isSingleCourseLoading" time="0.006">
+    </testcase>
+    <testcase classname="CoursesStateFacade selectors should select isSearchingState" name="CoursesStateFacade selectors should select isSearchingState" time="0.003">
+    </testcase>
+    <testcase classname="CoursesStateFacade selectors should select courses" name="CoursesStateFacade selectors should select courses" time="0.002">
+    </testcase>
+    <testcase classname="CoursesStateFacade selectors should select allCourses" name="CoursesStateFacade selectors should select allCourses" time="0.002">
+    </testcase>
+    <testcase classname="CoursesStateFacade selectors should select course" name="CoursesStateFacade selectors should select course" time="0.002">
+    </testcase>
+    <testcase classname="CoursesStateFacade selectors should select errorMessage" name="CoursesStateFacade selectors should select errorMessage" time="0.002">
+    </testcase>
+    <testcase classname="CoursesStateFacade methods should dispatch requestAllCourses action when calling getAllCourses" name="CoursesStateFacade methods should dispatch requestAllCourses action when calling getAllCourses" time="0.005">
+    </testcase>
+    <testcase classname="CoursesStateFacade methods should dispatch requestSingleCourse action with the provided id when calling getSingleCourse" name="CoursesStateFacade methods should dispatch requestSingleCourse action with the provided id when calling getSingleCourse" time="0.004">
+    </testcase>
+    <testcase classname="CoursesStateFacade methods should dispatch requestFilteredCourses action with the provided searchValue when calling getFilteredCourses" name="CoursesStateFacade methods should dispatch requestFilteredCourses action with the provided searchValue when calling getFilteredCourses" time="0.002">
+    </testcase>
+    <testcase classname="CoursesStateFacade methods should dispatch requestEditCourse action with the provided body and id when calling editCourse" name="CoursesStateFacade methods should dispatch requestEditCourse action with the provided body and id when calling editCourse" time="0.002">
+    </testcase>
+    <testcase classname="CoursesStateFacade methods should dispatch requestCreateCourse action with the provided body when calling createCourse" name="CoursesStateFacade methods should dispatch requestCreateCourse action with the provided body when calling createCourse" time="0.003">
+    </testcase>
+    <testcase classname="CoursesStateFacade methods should dispatch requestDeleteCourse action with the provided id when calling deleteCourse" name="CoursesStateFacade methods should dispatch requestDeleteCourse action with the provided id when calling deleteCourse" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Courses Reducer" errors="0" failures="0" skipped="0" timestamp="2024-08-15T18:52:27" time="0.272" tests="18">
+    <testcase classname="Courses Reducer should set isAllCoursesLoading to true on requestAllCourses" name="Courses Reducer should set isAllCoursesLoading to true on requestAllCourses" time="0.001">
     </testcase>
     <testcase classname="Courses Reducer should set allCourses and isAllCoursesLoading to false on requestAllCoursesSuccess" name="Courses Reducer should set allCourses and isAllCoursesLoading to false on requestAllCoursesSuccess" time="0.001">
     </testcase>
@@ -95,569 +59,95 @@
     </testcase>
     <testcase classname="Courses Reducer should set isAllCoursesLoading to true on requestFilteredCourses" name="Courses Reducer should set isAllCoursesLoading to true on requestFilteredCourses" time="0.001">
     </testcase>
-    <testcase classname="Courses Reducer should set allCourses and isAllCoursesLoading to false on requestFilteredCoursesSuccess" name="Courses Reducer should set allCourses and isAllCoursesLoading to false on requestFilteredCoursesSuccess" time="0">
+    <testcase classname="Courses Reducer should set allCourses and isAllCoursesLoading to false on requestFilteredCoursesSuccess" name="Courses Reducer should set allCourses and isAllCoursesLoading to false on requestFilteredCoursesSuccess" time="0.001">
     </testcase>
     <testcase classname="Courses Reducer should set isAllCoursesLoading and errorMessage on requestFilteredCoursesFail" name="Courses Reducer should set isAllCoursesLoading and errorMessage on requestFilteredCoursesFail" time="0.001">
     </testcase>
-    <testcase classname="Courses Reducer should clear errorMessage on requestDeleteCourse" name="Courses Reducer should clear errorMessage on requestDeleteCourse" time="0">
+    <testcase classname="Courses Reducer should clear errorMessage on requestDeleteCourse" name="Courses Reducer should clear errorMessage on requestDeleteCourse" time="0.001">
     </testcase>
-    <testcase classname="Courses Reducer should not modify the state on requestDeleteCourseSuccess" name="Courses Reducer should not modify the state on requestDeleteCourseSuccess" time="0">
+    <testcase classname="Courses Reducer should not modify the state on requestDeleteCourseSuccess" name="Courses Reducer should not modify the state on requestDeleteCourseSuccess" time="0.001">
     </testcase>
     <testcase classname="Courses Reducer should set errorMessage on requestDeleteCourseFail" name="Courses Reducer should set errorMessage on requestDeleteCourseFail" time="0.001">
     </testcase>
-    <testcase classname="Courses Reducer should clear errorMessage on requestEditCourse" name="Courses Reducer should clear errorMessage on requestEditCourse" time="0">
+    <testcase classname="Courses Reducer should clear errorMessage on requestEditCourse" name="Courses Reducer should clear errorMessage on requestEditCourse" time="0.001">
     </testcase>
-    <testcase classname="Courses Reducer should update course on requestEditCourseSuccess" name="Courses Reducer should update course on requestEditCourseSuccess" time="0">
+    <testcase classname="Courses Reducer should update course on requestEditCourseSuccess" name="Courses Reducer should update course on requestEditCourseSuccess" time="0.001">
     </testcase>
     <testcase classname="Courses Reducer should set errorMessage on requestEditCourseFail" name="Courses Reducer should set errorMessage on requestEditCourseFail" time="0">
     </testcase>
-    <testcase classname="Courses Reducer should clear errorMessage on requestCreateCourse" name="Courses Reducer should clear errorMessage on requestCreateCourse" time="0">
+    <testcase classname="Courses Reducer should clear errorMessage on requestCreateCourse" name="Courses Reducer should clear errorMessage on requestCreateCourse" time="0.001">
     </testcase>
-    <testcase classname="Courses Reducer should set errorMessage on requestCreateCourseFail" name="Courses Reducer should set errorMessage on requestCreateCourseFail" time="0">
+    <testcase classname="Courses Reducer should set errorMessage on requestCreateCourseFail" name="Courses Reducer should set errorMessage on requestCreateCourseFail" time="0.001">
     </testcase>
-    <testcase classname="Courses Reducer should return the current state by default" name="Courses Reducer should return the current state by default" time="0.001">
+    <testcase classname="Courses Reducer should return the current state by default" name="Courses Reducer should return the current state by default" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="CoursesEffects" errors="0" failures="15" skipped="0" timestamp="2024-08-13T12:14:50" time="2.971" tests="15">
-    <testcase classname="CoursesEffects getAll$ should return requestAllCoursesSuccess action on success" name="CoursesEffects getAll$ should return requestAllCoursesSuccess action on success" time="0.009">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+  <testsuite name="Course Actions" errors="0" failures="0" skipped="0" timestamp="2024-08-15T18:52:27" time="0.323" tests="17">
+    <testcase classname="Course Actions should create requestAllCourses action" name="Course Actions should create requestAllCourses action" time="0.008">
     </testcase>
-    <testcase classname="CoursesEffects getAll$ should return requestAllCoursesFail action on failure" name="CoursesEffects getAll$ should return requestAllCoursesFail action on failure" time="0.002">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    <testcase classname="Course Actions should create requestAllCoursesSuccess action" name="Course Actions should create requestAllCoursesSuccess action" time="0.002">
     </testcase>
-    <testcase classname="CoursesEffects filteredCourses$ should return requestFilteredCoursesSuccess action on success" name="CoursesEffects filteredCourses$ should return requestFilteredCoursesSuccess action on success" time="0.002">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    <testcase classname="Course Actions should create requestAllCoursesFail action" name="Course Actions should create requestAllCoursesFail action" time="0.001">
     </testcase>
-    <testcase classname="CoursesEffects filteredCourses$ should return requestFilteredCoursesFail action on failure" name="CoursesEffects filteredCourses$ should return requestFilteredCoursesFail action on failure" time="0.002">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    <testcase classname="Course Actions should create requestSingleCourse action" name="Course Actions should create requestSingleCourse action" time="0.003">
     </testcase>
-    <testcase classname="CoursesEffects getSpecificCourse$ should return requestSingleCourseSuccess action on success" name="CoursesEffects getSpecificCourse$ should return requestSingleCourseSuccess action on success" time="0.001">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    <testcase classname="Course Actions should create requestSingleCourseSuccess action" name="Course Actions should create requestSingleCourseSuccess action" time="0.002">
     </testcase>
-    <testcase classname="CoursesEffects getSpecificCourse$ should return requestSingleCourseFail action on failure" name="CoursesEffects getSpecificCourse$ should return requestSingleCourseFail action on failure" time="0.002">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    <testcase classname="Course Actions should create requestSingleCourseFail action" name="Course Actions should create requestSingleCourseFail action" time="0.006">
     </testcase>
-    <testcase classname="CoursesEffects deleteCourse$ should return requestAllCourses action on success" name="CoursesEffects deleteCourse$ should return requestAllCourses action on success" time="0.001">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    <testcase classname="Course Actions should create requestFilteredCourses action" name="Course Actions should create requestFilteredCourses action" time="0.002">
+    </testcase>
+    <testcase classname="Course Actions should create requestFilteredCoursesSuccess action" name="Course Actions should create requestFilteredCoursesSuccess action" time="0.002">
+    </testcase>
+    <testcase classname="Course Actions should create requestDeleteCourse action" name="Course Actions should create requestDeleteCourse action" time="0.003">
+    </testcase>
+    <testcase classname="Course Actions should create requestDeleteCourseSuccess action" name="Course Actions should create requestDeleteCourseSuccess action" time="0.001">
+    </testcase>
+    <testcase classname="Course Actions should create requestDeleteCourseFail action" name="Course Actions should create requestDeleteCourseFail action" time="0.003">
+    </testcase>
+    <testcase classname="Course Actions should create requestEditCourse action" name="Course Actions should create requestEditCourse action" time="0.003">
+    </testcase>
+    <testcase classname="Course Actions should create requestEditCourseSuccess action" name="Course Actions should create requestEditCourseSuccess action" time="0.001">
+    </testcase>
+    <testcase classname="Course Actions should create requestEditCourseFail action" name="Course Actions should create requestEditCourseFail action" time="0.001">
+    </testcase>
+    <testcase classname="Course Actions should create requestCreateCourse action" name="Course Actions should create requestCreateCourse action" time="0.002">
+    </testcase>
+    <testcase classname="Course Actions should create requestCreateCourseSuccess action" name="Course Actions should create requestCreateCourseSuccess action" time="0.002">
+    </testcase>
+    <testcase classname="Course Actions should create requestCreateCourseFail action" name="Course Actions should create requestCreateCourseFail action" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="CoursesEffects" errors="0" failures="0" skipped="0" timestamp="2024-08-15T18:52:28" time="2.336" tests="15">
+    <testcase classname="CoursesEffects getAll$ should return requestAllCoursesSuccess action on success" name="CoursesEffects getAll$ should return requestAllCoursesSuccess action on success" time="0.019">
+    </testcase>
+    <testcase classname="CoursesEffects getAll$ should return requestAllCoursesFail action on failure" name="CoursesEffects getAll$ should return requestAllCoursesFail action on failure" time="0.004">
+    </testcase>
+    <testcase classname="CoursesEffects filteredCourses$ should return requestFilteredCoursesSuccess action on success" name="CoursesEffects filteredCourses$ should return requestFilteredCoursesSuccess action on success" time="0.007">
+    </testcase>
+    <testcase classname="CoursesEffects filteredCourses$ should return requestFilteredCoursesFail action on failure" name="CoursesEffects filteredCourses$ should return requestFilteredCoursesFail action on failure" time="0.004">
+    </testcase>
+    <testcase classname="CoursesEffects getSpecificCourse$ should return requestSingleCourseSuccess action on success" name="CoursesEffects getSpecificCourse$ should return requestSingleCourseSuccess action on success" time="0.004">
+    </testcase>
+    <testcase classname="CoursesEffects getSpecificCourse$ should return requestSingleCourseFail action on failure" name="CoursesEffects getSpecificCourse$ should return requestSingleCourseFail action on failure" time="0.005">
+    </testcase>
+    <testcase classname="CoursesEffects deleteCourse$ should return requestAllCourses action on success" name="CoursesEffects deleteCourse$ should return requestAllCourses action on success" time="0.003">
     </testcase>
     <testcase classname="CoursesEffects deleteCourse$ should return requestDeleteCourseFail action on failure" name="CoursesEffects deleteCourse$ should return requestDeleteCourseFail action on failure" time="0.002">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
     </testcase>
-    <testcase classname="CoursesEffects editCourse$ should return requestEditCourseSuccess action on success" name="CoursesEffects editCourse$ should return requestEditCourseSuccess action on success" time="0.001">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    <testcase classname="CoursesEffects editCourse$ should return requestEditCourseSuccess action on success" name="CoursesEffects editCourse$ should return requestEditCourseSuccess action on success" time="0.003">
     </testcase>
-    <testcase classname="CoursesEffects editCourse$ should return requestEditCourseFail action on failure" name="CoursesEffects editCourse$ should return requestEditCourseFail action on failure" time="0.001">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    <testcase classname="CoursesEffects editCourse$ should return requestEditCourseFail action on failure" name="CoursesEffects editCourse$ should return requestEditCourseFail action on failure" time="0.002">
     </testcase>
-    <testcase classname="CoursesEffects createCourse$ should return requestCreateCourseSuccess action on success" name="CoursesEffects createCourse$ should return requestCreateCourseSuccess action on success" time="0.001">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    <testcase classname="CoursesEffects createCourse$ should return requestCreateCourseSuccess action on success" name="CoursesEffects createCourse$ should return requestCreateCourseSuccess action on success" time="0.002">
     </testcase>
-    <testcase classname="CoursesEffects createCourse$ should return requestCreateCourseFail action on failure" name="CoursesEffects createCourse$ should return requestCreateCourseFail action on failure" time="0.001">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    <testcase classname="CoursesEffects createCourse$ should return requestCreateCourseFail action on failure" name="CoursesEffects createCourse$ should return requestCreateCourseFail action on failure" time="0.002">
     </testcase>
     <testcase classname="CoursesEffects redirectToTheCoursesPage$ should navigate to /courses when requestCreateCourseSuccess action is dispatched" name="CoursesEffects redirectToTheCoursesPage$ should navigate to /courses when requestCreateCourseSuccess action is dispatched" time="0.002">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
     </testcase>
     <testcase classname="CoursesEffects redirectToTheCoursesPage$ should navigate to /courses when requestEditCourseSuccess action is dispatched" name="CoursesEffects redirectToTheCoursesPage$ should navigate to /courses when requestEditCourseSuccess action is dispatched" time="0.001">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
     </testcase>
-    <testcase classname="CoursesEffects redirectToTheCoursesPage$ should navigate to /courses when requestSingleCourseFail action is dispatched" name="CoursesEffects redirectToTheCoursesPage$ should navigate to /courses when requestSingleCourseFail action is dispatched" time="0.001">
-      <failure>NullInjectorError: R3InjectorError(DynamicTestModule)[CoursesEffects -&gt; CoursesStateFacade -&gt; Store -&gt; Store]: 
-  NullInjectorError: No provider for Store!
-    at NullInjector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7493:27)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7914:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesStateFacade_Factory [as factory] (ng:///CoursesStateFacade/ɵfac.js:5:46)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at injectInjectorOnly (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:618:33)
-    at ɵɵinject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:622:42)
-    at Object.CoursesEffects_Factory [as factory] (ng:///CoursesEffects/ɵfac.js:6:49)
-    at R3Injector.hydrate (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:8015:35)
-    at R3Injector.get (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\core.mjs:7903:33)
-    at TestBedImpl.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24209:52)
-    at Function.inject (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\@angular\core\fesm2020\testing.mjs:24068:37)
-    at C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\test\courses.effects.spec.ts:47:27
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:412:30)
-    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:3833:43)
-    at _ZoneDelegate.Object.&lt;anonymous&gt;._ZoneDelegate.invoke (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:411:56)
-    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:169:47)
-    at Object.wrappedFunc (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\zone.js\bundles\zone-testing-bundle.umd.js:4333:34)
-    at Promise.then.completed (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:300:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\utils.js:233:10)
-    at _callCircusHook (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:279:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:244:5)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:125:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at _runTestsForDescribeBlock (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:120:9)
-    at run (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\run.js:70:3)
-    at runAndTransformResultsToJestFormat (C:\Users\Hanna_Toustsik\Documents\Study\Angular\Code\task5\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)</failure>
+    <testcase classname="CoursesEffects redirectToTheCoursesPage$ should navigate to /courses when requestSingleCourseFail action is dispatched" name="CoursesEffects redirectToTheCoursesPage$ should navigate to /courses when requestSingleCourseFail action is dispatched" time="0.002">
     </testcase>
   </testsuite>
 </testsuites>

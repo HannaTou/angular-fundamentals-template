@@ -13,11 +13,8 @@ import { CoursesService } from '@app/services/courses.service';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './auth/interceptors/token.interceptor';
-import { StoreModule } from '@ngrx/store';
+import { StoreModule, Store } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { reducers, effects } from './store/index';
-import { CoursesEffects } from './store/courses/courses.effects';
-import { coursesReducer } from './store/courses/courses.reducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,8 +27,8 @@ import { coursesReducer } from './store/courses/courses.reducer';
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    StoreModule.forRoot({ courses: coursesReducer }), // Ensure reducers are properly set
-    EffectsModule.forRoot([CoursesEffects]),
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
   ],
   providers: [
     {

@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, catchError, throwError, map, of, forkJoin } from 'rxjs';
 import { CoursesService } from './courses.service';
 import { tap, finalize, switchMap } from 'rxjs/operators';
+import { Store } from '@ngrx/store';
+import { CoursesState } from '../store/courses/courses.reducer';
 
 
 @Injectable({
@@ -18,7 +20,8 @@ export class CoursesStoreService {
     authors: string[] = [];
 
     constructor(
-        private coursesService: CoursesService
+        private coursesService: CoursesService,
+        private store: Store<CoursesState>
     ) {}
     
     getAll(): Observable<any> {
